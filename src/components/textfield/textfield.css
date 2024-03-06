@@ -1,0 +1,21 @@
+.TextFieldClass {
+    display: flex;
+    font-family: 'avenir';
+    flex-direction: column;
+    width: 70%;
+}
+
+.TextFieldClass input{
+    border: none;
+    border-bottom: 2px solid #5f5f5f;
+    padding: 10px;
+    height: 30px;
+    outline: none;
+}
+.TextFieldClass input:hover{
+    border-bottom: 2px solid black;
+}
+.TextFieldClass label{
+    font-size: 12px;
+    padding: 5px 10px;
+}

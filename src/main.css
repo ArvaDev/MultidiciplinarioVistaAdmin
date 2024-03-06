@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'avenir';
+    src: url('./assets/fonts/Avenir Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DS';
+    src: url('./assets/fonts/DancingScript-Regular.ttf') format('truetype');
+}
+
+*{
+    font-family: 'avenir';
+}
