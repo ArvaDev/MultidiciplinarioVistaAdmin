@@ -1,5 +1,5 @@
-import TextField from "../../components/textfield/textfield";
-import BlackBtn from "../../components/blackBtn/BlackBtn";
+import TextField from "../../components/UI/textfield/textfield";
+import BlackBtn from "../../components/UI/blackBtn/BlackBtn";
 import './Login.css';
 function Login() {
     return (

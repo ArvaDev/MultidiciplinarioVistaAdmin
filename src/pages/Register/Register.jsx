@@ -1,6 +1,6 @@
-import TextField from '../../components/textfield/textfield';
-import BlackBtn from '../../components/blackBtn/BlackBtn';
-import TransparentBtn from '../../components/transparentBtn/TransparentBtn';
+import TextField from '../../components/UI/textfield/textfield';
+import BlackBtn from '../../components/UI/blackBtn/BlackBtn';
+import TransparentBtn from '../../components/UI/transparentBtn/TransparentBtn';
 
 import './Register.css'
 function Register() {
