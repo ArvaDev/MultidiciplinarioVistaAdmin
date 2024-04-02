@@ -1,0 +1,43 @@
+.Lupa{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: lupa;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes lupa{
+    0%{transform: translateX(0px)  translateY(20px); transform: rotate(50deg);}
+    50%{transform: translateX(120px) translateY(20px);}
+    75%{transform: translateX(120px) translateY(0px);}
+    100%{transform: translateX(0px)  translateY(20px); transform: rotate(50deg);}
+}
+
+.Lupa .Cabeza{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #afafaf;
+    border-radius: 1000px;
+    
+    .Agujero{
+        width:75px;
+        height: 75px;
+        background: white;
+        border-radius: 1000px;
+    }
+}
+ .Lupa .Mango{
+    margin: -10px;
+    width: 20px;
+    height: 80px;
+    background: #afafaf;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+ }
