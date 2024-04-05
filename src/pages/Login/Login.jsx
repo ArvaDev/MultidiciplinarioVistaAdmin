@@ -4,15 +4,15 @@ import './Login.css';
 function Login() {
     return (
         <div className="LoginClass">
-            <div className="Header"></div>
             <div className="Contend">
+                <p className="MovilTitle">Cooperativa pimienta Jotiquetz</p>
                 <div className="Form">
                     <p>Inicio de sesión</p>
                     <TextField message="Usuario *"/>
                     <TextField message="Contraseña *" type="password"/>
                     <BlackBtn message="Iniciar sesión" width="30%"/>
                 </div>
-                <div className="Image">
+                <div className="Image"> {/* <------ que desaparesca en movil */}
                     <p>Cooperativa pimienta Jotiquetz</p>
                 </div>
             </div>

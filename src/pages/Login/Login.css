@@ -1,38 +1,82 @@
-.LoginClass .Header{
-    background: #6e9f72;
-    width: 100%;
-    height: 15vh;
-}
-.LoginClass .Contend{
-    display: flex;
-    height: 85vh;
-    width: 100%;
-}
-.LoginClass .Form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 50%;
-}
-.LoginClass .Form p{
-    font-family: Georgia;
-    font-size: 30px;
-}
-.LoginClass .Image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../../assets/images/img1.jpeg');
-    background-position: center center;
-    height: 100%;
-    width: 50%;
-}
-.LoginClass .Image p{
-    font-family: 'DS';
-    text-align: center;
-    font-size: 75px;
-    color: white;
-}
+/* móviles */
+@media (max-width: 768px) {
+    .LoginClass .Contend {
+        flex-direction: column;
+        height: 50vh;
+    }
 
+    .LoginClass .Form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }    
+    
+    .LoginClass .Form p {
+        font-family: Georgia;
+        font-size: 30px;
+    }
+
+    .LoginClass .Image {
+        display: none;
+    }
+    .MovilTitle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'DS';
+        font-size: 25px;
+        height: 12vh;
+        width: 100%;
+        color: white;
+        margin: 0;
+        background-image: url('../../assets/images/img1.jpeg');
+        background-position: center center;
+    }
+}
+/* Escritorio */
+@media (min-width: 769px) {
+    .LoginClass .Contend {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .LoginClass .Form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+    }
+
+    .LoginClass .Form p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+    }
+
+    .MovilTitle{
+        display: none;
+    }
+
+    .LoginClass .Image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../../assets/images/img1.jpeg');
+        background-position: center center;
+        height: 100%;
+        width: 50%;
+    }
+
+    .LoginClass .Image p {
+        font-family: 'DS';
+        text-align: center;
+        font-size: 75px;
+        color: white;
+    }
+}

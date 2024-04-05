@@ -6,7 +6,6 @@ import './Register.css'
 function Register() {
     return (
         <div className="Register">
-            <div className="Header"></div>
             <div className='Container'>
                 <div className='Form'>
                     <p>Registro de productos</p>
