@@ -6,7 +6,20 @@
     font-family: 'DS';
     src: url('./assets/fonts/DancingScript-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'RW';
+    src: url('./assets/fonts/RW.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CGM';
+    src: url('./assets/fonts/CGM.ttf') format('truetype');
+}
 
 *{
     font-family: 'avenir';
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

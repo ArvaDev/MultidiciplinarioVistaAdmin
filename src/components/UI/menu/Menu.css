@@ -1,0 +1,22 @@
+.MenuClass{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuClass .LinkClass{
+    margin: 10px;
+    font-size: 15px;
+}
+.MenuClass .LinkIcon{
+    font-size: 20px;
+    background: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}

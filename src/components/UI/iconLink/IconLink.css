@@ -1,0 +1,22 @@
+.IconLinkClass{
+    width: 200px;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+.IconLinkClass:hover{
+    color: #3a3a3a;
+}
+.IconLinkClass p{
+    margin: 5px;
+    font-size: 20px;
+    font-family: 'avenir';
+}
+.IconLinkClass .Icon{
+    font-size: 40px;
+}
