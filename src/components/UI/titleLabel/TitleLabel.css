@@ -1,0 +1,28 @@
+.TitleLabelClass{
+    overflow: hidden;
+}
+.TitleLabelClass p{
+    margin: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'CGM';
+}
+
+/* escritorio */
+@media (min-width: 1244px) {
+    .TitleLabelClass p{
+        font-size: 20px;
+    }
+    .TitleLabelClass .Title{
+        font-size: 40px;
+    }
+}
+/* móvil */
+@media (max-width: 1243px) {
+    .TitleLabelClass p{
+        font-size: 18px;
+    }
+    .TitleLabelClass .Title{
+        font-size: 30px;
+    }
+}

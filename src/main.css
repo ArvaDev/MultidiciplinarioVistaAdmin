@@ -23,3 +23,10 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.ContainerObjects{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

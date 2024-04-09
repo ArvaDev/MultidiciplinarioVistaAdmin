@@ -1,3 +1,15 @@
+/* Reglas de estilo comunes */
+.Register .Container .Form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Form .flexInput {
+    margin: 10px 0;
+}
 
 /* Escritorio */
 @media (min-width: 769px) {
@@ -9,11 +21,6 @@
 
     .Register .Container .Form {
         width: 50%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
 
     .Form p {
@@ -26,13 +33,11 @@
     }
 
     .Form .flexInput {
-        display: flex;
         width: 73%;
         justify-content: space-around;
     }
 
     .Form .textfieldClass {
-        margin: 10px 0;
         width: 45%;
     }
 
@@ -42,7 +47,6 @@
         background-size: cover;
         background-position: center;
         width: 50%;
-        height: 100%;
         display: flex;
         align-items: last baseline;
         justify-content: center;
@@ -53,23 +57,21 @@
         margin: 40px 0;
     }
 }
-/* movil */
+
+/* Movil */
 @media (max-width: 768px) {
     .Register .Container .Form {
         width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
+
     .Form .flexInput{
         width: 70%;
     }
+
     .Form .textfieldClass {
-        margin: 10px 0;
         width: 100%;
     }
+
     .TBClass{
         position: relative;
         width: 70%;

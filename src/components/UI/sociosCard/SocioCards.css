@@ -1,0 +1,86 @@
+.SocioCardsClass{
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    background: #efefef;
+    border-radius: 10px;
+    margin: 10px;
+}
+.SocioCardsClass .Icon{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    font-size: 400px;
+    justify-content: center;
+    background: white;
+    color: #3f3f3f;
+}
+.Data{
+    height: 100%;
+    width: 40%;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.SocioCardsClass .TrashButton{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: transparent;
+    border: none;
+    margin: 5px;
+}
+.SocioCardsClass .TrashButton:hover{
+    color: #6f6f6f;
+}
+/* escritorio */
+@media (min-width: 1244px) {
+    .SocioCardsClass{
+        width: 500px;
+        height: 250px;
+    }
+    .SocioCardsClass .Data p{
+        font-size: 20px;
+        margin: 20px 10px;
+    }
+    .SocioCardsClass .Data .C{
+        font-family: 'CGM';
+    }
+    .SocioCardsClass .Data .N{
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}
+/* móvil */
+@media (max-width: 1243px) {
+    .SocioCardsClass .Icon{
+        width: 100px;
+        height: 100%;
+    }
+    .SocioCardsClass .Data{
+        height: 100%;
+        width: 70%;
+        display: flex;
+    }
+    .SocioCardsClass .Data p{
+        margin: 10px;
+    }
+    .SocioCardsClass .Data .C{
+        font-size: 15px;
+        font-family: 'CGM';
+    }
+    .SocioCardsClass .Data .N{
+        font-size: 14px;
+    }
+    .SocioCardsClass{
+        width: 330px;
+        height: 150px;
+    }
+
+}

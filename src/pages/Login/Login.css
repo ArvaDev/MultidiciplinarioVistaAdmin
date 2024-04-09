@@ -1,28 +1,24 @@
-/* móviles */
+/* Reglas de estilo comunes */
+.LoginClass .Form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.LoginClass .Form p {
+    font-size: 30px;
+}
+
+/* Móviles */
 @media (max-width: 768px) {
     .LoginClass .Contend {
         flex-direction: column;
         height: 50vh;
     }
 
-    .LoginClass .Form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-    }    
-    
-    .LoginClass .Form p {
-        font-family: Georgia;
-        font-size: 30px;
-    }
-
-    .LoginClass .Image {
-        display: none;
-    }
-    .MovilTitle{
+    .MovilTitle {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,7 +31,16 @@
         background-image: url('../../assets/images/img1.jpeg');
         background-position: center center;
     }
+
+    .LoginClass .Image {
+        display: none;
+    }
+
+    .LoginClass .Form p {
+        font-family: Georgia;
+    }
 }
+
 /* Escritorio */
 @media (min-width: 769px) {
     .LoginClass .Contend {
@@ -46,20 +51,10 @@
     }
 
     .LoginClass .Form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100%;
         width: 50%;
     }
 
-    .LoginClass .Form p {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 30px;
-    }
-
-    .MovilTitle{
+    .MovilTitle {
         display: none;
     }
 

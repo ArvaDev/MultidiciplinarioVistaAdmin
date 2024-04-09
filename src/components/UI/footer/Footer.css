@@ -1,0 +1,23 @@
+.FooterClass{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+.FooterClass p{
+    margin: 0;
+    font-size: 22px;
+    font-family: 'CGM';
+}
+.FooterClass h4{
+    margin: 10px 0;
+    font-size: 15px;
+    font-family: 'RW';
+    font-weight: 400;
+}
