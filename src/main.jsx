@@ -6,7 +6,9 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Home from './pages/Home/Home'
 import Socios from './pages/Socios/Socios'
+import Notificaciones from './pages/Notificationes/Notificaciones'
 import NoFound from './pages/NoFound/NoFound'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/Home/Socios",
     element: <Socios/>
+  },
+  {
+    path: "/Home/Notificaciones",
+    element: <Notificaciones/>
   },
   {
     path: "*",

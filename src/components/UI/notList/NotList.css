@@ -1,0 +1,11 @@
+.NotListClass{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.NotListClass p{
+    font-family: 'RW';
+    font-weight: 500;
+    width: 25%;
+}

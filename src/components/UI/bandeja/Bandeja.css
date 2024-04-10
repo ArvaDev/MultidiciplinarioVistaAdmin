@@ -1,0 +1,20 @@
+.BandejaClass{
+    width: 100%;
+    overflow: hidden;
+    transition: .2s;
+    border-bottom: 1px solid #6f6f6f;
+}
+.BandejaClass p{
+    margin: 10px;
+}
+.BandejaClass .ListHeader{
+    width: 100%;
+    display: flex;
+
+    p{
+        width: 25%;
+        font-family: bolder;
+        font-size: 20px;
+        font-family: 'RW';
+    }
+}

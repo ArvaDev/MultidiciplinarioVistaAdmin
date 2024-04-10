@@ -1,6 +1,6 @@
 import './SocioCards.css'
-import { FaTrashCan } from "react-icons/fa6";
-import { BiSolidUserCircle } from "react-icons/bi";
+import { FaTrashCan } from "react-icons/fa6"
+import { BiSolidUserCircle } from "react-icons/bi"
 export default function SocioCards({name, mail, tel}) {
     return (
         <div className='SocioCardsClass'>
