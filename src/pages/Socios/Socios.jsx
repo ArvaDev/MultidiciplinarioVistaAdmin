@@ -6,12 +6,14 @@ import { UsersApi } from '../../utils/api/UsersApi'
 export default function Socios() {
     return (
         <>
-            <Header/>
-            <TitleLabel title="Socios" subtitle="Dedicación, Experiencia y pasión"/>
-            <div className='ContainerObjects'>
-                {UsersApi.map(ob => (
-                    <SocioCards name={ob.name} tel={ob.tel} mail={ob.mail} user={ob.user}/>
-                ))}
+            <Header />
+            <TitleLabel title="Socios" subtitle="Dedicación, Experiencia y pasión" />
+            <div className='TotalContainer'>
+                <div className='ContainerObjects'>
+                    {UsersApi.map(ob => (
+                        <SocioCards name={ob.name} tel={ob.tel} mail={ob.mail} user={ob.user} />
+                    ))}
+                </div>
             </div>
         </>
     );

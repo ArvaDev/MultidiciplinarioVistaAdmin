@@ -7,14 +7,16 @@ import { dataApi } from '../../utils/api/dataApi'
 export default function Home() {
     return (
         <div className='HomeClass'>
-            <Header/>
-            <TitleLabel title="Productos publicados"/>
-            <div className='ContainerObjects'>
-                {dataApi.map(ob => (
-                    <ProductCard name={ob.nombre} image={ob.imagen}/>
-                ))}
+            <Header />
+            <TitleLabel title="Productos publicados" />
+            <div className='TotalContainer'>
+                <div className='ContainerObjects'>
+                    {dataApi.map(ob => (
+                        <ProductCard name={ob.nombre} image={ob.imagen} />
+                    ))}
+                </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

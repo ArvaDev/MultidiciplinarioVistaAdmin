@@ -7,8 +7,6 @@
     justify-content: space-around;
     background: white;
     overflow: hidden;
-    position: absolute;
-    bottom: 0;
 }
 .FooterClass p{
     margin: 0;
