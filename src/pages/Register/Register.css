@@ -34,6 +34,7 @@
 
     .Form .flexInput {
         width: 73%;
+        display: flex;
         justify-content: space-around;
     }
 

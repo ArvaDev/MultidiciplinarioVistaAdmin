@@ -1,0 +1,29 @@
+.RegistroSociosClass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.RegistroSociosClass .Title{
+    font-size: 38px;
+}
+.RegistroSociosClass .Inputs{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.RegistroSociosClass .flexInput{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.flexInput .SociosInput{
+    width: 45%;
+}
+.BtnClassSocios{
+    width: 100%;
+    
+}

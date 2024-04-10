@@ -1,8 +1,6 @@
 import './BlackBtn.css'
-function BlackBtn({message, width}) {
+export default function BlackBtn({message, width, customClass, onClick, onBlur}) {
     return (
-        <button style={{width: width}}>{message}</button>
+        <button className={customClass} style={{width: width}} onClick={onClick} onBlur={onBlur}>{message}</button>
     );
 }
-
-export default BlackBtn;

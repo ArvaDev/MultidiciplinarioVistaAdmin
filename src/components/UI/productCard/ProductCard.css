@@ -57,7 +57,7 @@
 /* escritorio */
 @media (min-width: 1244px) {
     .ProductCardClass{
-        width: 250px;
+        width: 20%;
         height: 400px;
     }
     .ProductCardClass p{
