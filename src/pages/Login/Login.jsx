@@ -8,9 +8,9 @@ function Login() {
                 <p className="MovilTitle">Cooperativa pimienta Jotiquetz</p>
                 <div className="Form">
                     <p>Inicio de sesión</p>
-                    <TextField message="Usuario *"/>
-                    <TextField message="Contraseña *" type="password"/>
-                    <BlackBtn message="Iniciar sesión" width="30%"/>
+                    <TextField message="Usuario *" customClass="LoginInput"/>
+                    <TextField message="Contraseña*" customClass="LoginInput" type="password"/>
+                    <BlackBtn message="Iniciar sesión" width="30%" to="/Home"/>
                 </div>
                 <div className="Image"> {/* <------ que desaparesca en movil */}
                     <p>Cooperativa pimienta Jotiquetz</p>

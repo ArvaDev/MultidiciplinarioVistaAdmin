@@ -27,13 +27,20 @@ a{
 .ContainerObjects{
     width: 80%;
     display: flex;
-    justify-content: left;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: left;
+    align-items: left;
 }
-.TotalContainer{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* escritorio */
+@media (min-width: 1244px) {
+    .responsiveView{
+        display: none;
+    }
+}
+/* móvil */
+@media (max-width: 1243px) {
+    .responsiveView{
+        display: flex;
+    }
 }

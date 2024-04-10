@@ -7,6 +7,10 @@
     height: 100%;
 }
 
+.LoginInput{
+    width: 75%;
+}
+
 .LoginClass .Form p {
     font-size: 30px;
     font-family: Georgia;

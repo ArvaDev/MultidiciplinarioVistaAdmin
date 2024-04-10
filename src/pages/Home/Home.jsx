@@ -9,7 +9,7 @@ export default function Home() {
         <div className='HomeClass'>
             <Header />
             <TitleLabel title="Productos publicados" />
-            <div className='TotalContainer'>
+            <div className='ProductosContainer'>
                 <div className='ContainerObjects'>
                     {dataApi.map(ob => (
                         <ProductCard name={ob.nombre} image={ob.imagen} />

@@ -10,10 +10,10 @@ export default function Socios() {
         <>
             <Header />
             <TitleLabel title="Socios" subtitle="Dedicación, Experiencia y pasión" />
-            <div className='TotalContainer'>
-                <div className='ContainerObjects'>
+            <div className='SociosContainer'>
+                <div className='ContainerObjects customWithContainer'>
                     {UsersApi.map(ob => (
-                        <SocioCards name={ob.name} tel={ob.tel} mail={ob.mail} user={ob.user} />
+                        <SocioCards name={ob.name} tel={ob.tel} mail={ob.mail} />
                     ))}
                 </div>
             </div>

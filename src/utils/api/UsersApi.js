@@ -2,22 +2,16 @@ export const UsersApi = [
     {
         name: "Isai Abel López Sánchez",
         mail: "abcd@mail.com",
-        tel: "1234567890",
-        user: "User 1",
-        imgPerfil: "" //Si no hay foto
+        tel: "1234567890"
     },
     {
         name: "Jose Norberto López Gómez",
-        correo: "abcd@mail.com",
-        tel: "1234567890",
-        user: "User 1",
-        imgPerfil: ""
+        mail: "abcd@mail.com",
+        tel: "1234567890"
     },
     {
         name: "Armando Rodríguez Villarreal",
-        correo: "abcd@mail.com",
-        tel: "1234567890",
-        user: "User 1",
-        imgPerfil: ""
+        mail: "abcd@mail.com",
+        tel: "1234567890"
     },
 ]

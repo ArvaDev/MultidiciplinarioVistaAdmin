@@ -27,3 +27,14 @@
     width: 100%;
     
 }
+
+/* escritorio */
+@media (min-width: 1244px) {
+
+}
+/* móvil */
+@media (max-width: 1243px) {
+    .RegistroSociosClass .Inputs{
+        width: 90%;
+    }
+}

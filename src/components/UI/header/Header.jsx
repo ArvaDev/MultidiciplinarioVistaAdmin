@@ -10,7 +10,7 @@ export default function Header() {
         <div className="HeaderClass">
             <p>Cooperativa Pimienta Jotiquez S.C.L. <img src={icon} width="20"/></p>
             <div className='Menu'>
-                <IconLink icon={<FaCircleUser></FaCircleUser>} text="Login" cssClass="IconClass"/>
+                <IconLink icon={<FaCircleUser></FaCircleUser>} text="Login" cssClass="IconClass" to="/"/>
                 <Menu/>
             </div>
         </div>

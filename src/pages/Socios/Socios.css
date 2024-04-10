@@ -1,3 +1,21 @@
-.TotalContainer{
+.SociosContainer{
     border-bottom: 1px solid #3f3f3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* escritorio */
+@media (min-width: 1244px) {
+    .customWithContainer{
+        width: 60%;
+        margin: 20px 0;
+    }
+}
+/* móvil */
+@media (max-width: 1243px) {
+    .customWithContainer{
+        width: 100%;
+        margin: 20px 0;
+    }
 }

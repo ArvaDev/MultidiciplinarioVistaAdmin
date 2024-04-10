@@ -3,26 +3,19 @@
     display: flex;
     align-items: start;
     background: #efefef;
+    box-shadow: 0 0 5px 0 #afafaf;
     border-radius: 10px;
-    margin: 10px;
+    margin: 1%;
 }
 .SocioCardsClass .Icon{
     height: 100%;
-    width: 250px;
+    width: 20%;
     display: flex;
     align-items: center;
     font-size: 400px;
     justify-content: center;
     background: white;
     color: #3f3f3f;
-}
-.Data{
-    height: 100%;
-    width: 40%;
-    margin: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .SocioCardsClass .TrashButton{
     width: 40px;
@@ -36,21 +29,29 @@
     border: none;
     margin: 5px;
 }
+.SocioCardsClass .Content{
+    width: 20%;
+}
 .SocioCardsClass .TrashButton:hover{
     color: #6f6f6f;
 }
 /* escritorio */
 @media (min-width: 1244px) {
     .SocioCardsClass{
-        width: 500px;
-        height: 250px;
+        width: 47%;
+        height: 130px;
+    }
+    .SocioCardsClass .Data{
+        height: 100%;
+        width: 70%;
     }
     .SocioCardsClass .Data p{
         font-size: 20px;
         margin: 20px 10px;
     }
     .SocioCardsClass .Data .C{
-        font-family: 'CGM';
+        font-weight: bold;
+        margin: 5px 10px;
     }
     .SocioCardsClass .Data .N{
         font-size: 16px;
@@ -59,28 +60,34 @@
 }
 /* móvil */
 @media (max-width: 1243px) {
+    .SocioCardsClass{
+        width: 90%;
+        height: 150px;
+    }
     .SocioCardsClass .Icon{
         width: 100px;
         height: 100%;
     }
     .SocioCardsClass .Data{
         height: 100%;
-        width: 70%;
+        width: 40%;
         display: flex;
     }
+    .SocioCardsClass .Data{
+        margin: 10px 5px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
     .SocioCardsClass .Data p{
-        margin: 10px;
+        margin: 0;
     }
     .SocioCardsClass .Data .C{
         font-size: 15px;
-        font-family: 'CGM';
+        font-weight: bold;
     }
     .SocioCardsClass .Data .N{
         font-size: 14px;
-    }
-    .SocioCardsClass{
-        width: 330px;
-        height: 150px;
     }
 
 }

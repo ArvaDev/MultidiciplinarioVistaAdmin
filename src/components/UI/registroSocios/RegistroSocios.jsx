@@ -7,8 +7,8 @@ export default function RegistroSocios() {
             <p className='Title'>Registro de Socios</p>
             <div className='Inputs'>
                 <div className='flexInput'>
-                    <TextField message="E-mail" customClass="SociosInput"/>
-                    <TextField message="E-mail" customClass="SociosInput"/>
+                    <TextField message="Usuario" customClass="SociosInput"/>
+                    <TextField message="Telefono" customClass="SociosInput"/>
                 </div>
                 <TextField message="E-mail"/>
                 <BlackBtn customClass="BtnClassSocios" message="Registrar"/>
