@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export default function SelectVariants() {
-  const [Rol, setRol] = React.useState(" ");
+  const [Rol, setRol] = React.useState(10); // Inicializar con el valor 10 (Administrador)
     
   const handleChange = (event) => {
     setRol(event.target.value);
