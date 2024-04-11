@@ -5,23 +5,32 @@ import TransparentBtn from '../../components/UI/transparentBtn/TransparentBtn';
 import './Register.css'
 function Register() {
     return (
-        <div className="Register">
-            <div className='Container'>
-                <div className='Form'>
-                    <p>Registro de productos</p>
-                    <h5>Jotiquetz</h5>
-                    <div className='flexInput'>
-                        <TextField message="Nombre" customClass="textfieldClass"/>
-                        <TextField message="Marca" customClass="textfieldClass"/>
-                    </div>
-                    <TextField message="Descripción *"/>
-                    <BlackBtn message="Agregar"/>
+        <form action="" className="Register">
+            <div className="Form">
+                <p>Registro de Productos</p>
+                <h5>Jotiquetz</h5>
+                <div className='flexInput'>
+                    <TextField message="Nombre" customClass="textfieldClass" />
+                    <TextField message="Marca" customClass="textfieldClass" />
                 </div>
-                <div className='Update'>
-                    <TransparentBtn message="Subir" customClass="TBClass"/>
+                <div className='flexInput'>
+                    <TextField message="Presentacion" customClass="textfieldClass" />
+                    <TextField message="Cantidad" customClass="textfieldClass" />
                 </div>
+                <div className="flex-img">
+                <TextField message="Descripcion"/>
+                <img src="#" alt="" />
+                </div>
+                <div className="Update-responsive">
+                <TransparentBtn message={"Subir"} customClass={"TBClass"} />
             </div>
-        </div>
+                <BlackBtn message="Agregar"/>
+                
+            </div>
+            <div className="Update">
+                <TransparentBtn message={"Subir"} customClass={"TBClass"} />
+            </div>
+        </form>
     );
 }
 export default Register;

@@ -1,7 +1,7 @@
 import './BlackBtn.css'
-export default function BlackBtn({message, width, customClass, onClick, onBlur, to}) {
+export default function BlackBtn({message, width, customClass, onClick, onBlur, to, margin}) {
     return (
-        <button className={customClass} style={{width: width}} onClick={onClick} onBlur={onBlur}>
+        <button className={ `${customClass} ${margin}` } style={{width: width}} onClick={onClick} onBlur={onBlur}>
             <a href={to} className='BlackBtnText'>{message}</a>
         </button>
     );
