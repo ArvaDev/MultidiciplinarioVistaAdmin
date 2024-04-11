@@ -4,7 +4,8 @@ import Notificacion from '../../components/UI/notificacion/Notificacion';
 import TitleLabel from '../../components/UI/titleLabel/TitleLabel';
 import { BiBell } from 'react-icons/bi';
 import { notiApi } from '../../utils/api/notiApi'
-export default function Notificaciones() {
+
+export default function Notificaciones() { 
     return (
         <div className='NotificacionesClass'>
             <Header />

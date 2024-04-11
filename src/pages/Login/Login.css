@@ -33,7 +33,7 @@
         width: 100%;
         color: white;
         margin: 0;
-        background-image: url('../../assets/images/img1.jpeg');
+        background-image: url('../../assets/images/FontLogin.jpg');
         background-position: center center;
     }
 
@@ -43,6 +43,7 @@
 
     .LoginClass .Form p {
         font-family: Georgia;
+       color:  red;
     }
 }
 
@@ -67,8 +68,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url('../../assets/images/img1.jpeg');
-        background-position: center center;
+        background-image: url('../../assets/images/FontLogin.jpg');
+        background-size: cover;
         height: 100%;
         width: 50%;
     }
