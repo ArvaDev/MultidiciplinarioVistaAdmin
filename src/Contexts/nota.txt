@@ -1,0 +1,2 @@
+// en la parte del login se hizo desestructuracion, y guardare los datos del usuario. 
+para que puedas usarlos en la vista de estadisticas 

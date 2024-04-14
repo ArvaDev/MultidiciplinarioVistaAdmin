@@ -7,6 +7,7 @@ import Register from './pages/Register/Register'
 import Home from './pages/Home/Home'
 import Socios from './pages/Socios/Socios'
 import Notificaciones from "./pages/Notificationes/Notificaciones"
+import RegisterSocios from './pages/RegisterSocio/RegisterSocio'
 import NoFound from './pages/NoFound/NoFound'
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/Home/Notificaciones",
     element: <Notificaciones/>
+  },
+  {
+    path: "/Home/register-socios",
+    element: <RegisterSocios/>
   },
   {
     path: "*",

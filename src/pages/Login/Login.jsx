@@ -1,43 +1,57 @@
+import './Login.css';
 import TextField from "../../components/UI/textfield/textfield";
 import BlackBtn from "../../components/UI/blackBtn/BlackBtn";
-import SelectVariants from "../../components/UI/Selected/Select";
-import { Validate } from "../../utils/api";
-import { useState, useEffect } from "react";
-import './Login.css';
+import AlertError from "../../components/UI/Error/AlertError";
+import { Signin } from "../../Service/Login";
+import { useField } from "../../Hooks/useField";
+import { useState } from 'react';
+import { FormDataValidation } from '../../utils/api';
 
-function Login() {
-    const { Name } = Validate;
+export default function Login() {
 
-    // Estados
-    const [UserName, setUserName] = useState("");
-    const [Password, setPassword] = useState("");
-    const [MesasageError, setMesasageError] = useState("");
+    const username = useField({ type: "Nombre" });
+    const password = useField({ type: "Contraseña" });
+    const email = useField({ type: "Correo" });
+    const [dataUser, setDataUser] = useState(null);
+    const [messageError, setMessageError] = useState("");
 
-    // Manejador del campo de usuario
-    const handlerUserName = (event) => { setUserName(event.target.value);};
-    // Manejador del campo de contraseña
-    const handlerPassword = (event) => { setPassword(event.target.value); };
+    const handlerClick = async (event) => {
+        try {
+            event.preventDefault();
+            const value = FormDataValidation([username.value, password.value, email.value]);
+                
+            if (!value) {
+                setDataUser("");
 
-    useEffect(() => {
-        const value = Name(UserName); 
-        setMesasageError(value); 
-    }, [UserName]); 
+                const data = await Signin({username, password, email});
+                setDataUser(data);
+            
+            } else{
+                setMessageError(value);
+            }
+
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <div className="LoginClass">
-            <form action="" className="Form">
+            <form onSubmit={handlerClick} className="Form">
                 <div className="container-fields">
                     <span className="sesion-title">Inicio de sesión <img src="../../../public/logo.png" height={"30px"} />  </span>
-                    <TextField message="Usuario" customClass="LoginInput" onblur={handlerUserName} />
-                    <TextField message="Contraseña" customClass="LoginInput" type="password" onchange={handlerPassword} />
-                    <SelectVariants />
-                    <BlackBtn message="Iniciar sesión" width="30%" margin={"margin"} to="/Home" />
-
+                    <TextField message="Usuario: " customClass="LoginInput" onblur={username.onblur} />
+                    {username.messageError && <AlertError message={username.messageError} />}
+                    <TextField message="Email: " customClass="LoginInput" onblur={email.onblur} />
+                    {email.messageError && <AlertError message={email.messageError} />}
+                    <TextField message="Contraseña: " customClass="LoginInput" type="password" onblur={password.onblur} />
+                    {password.messageError && <AlertError message={password.messageError} />}
+                    <BlackBtn message="Iniciar sesión" width="100%" type={'submit'} />
+                    {messageError && <AlertError message={messageError} />}
                 </div>
             </form>
             <div className="Image"> <p>Cooperativa pimienta Jotiquetz</p> </div>
         </div>
     );
 }
-
-export default Login;

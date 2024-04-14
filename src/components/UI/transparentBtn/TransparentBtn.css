@@ -1,4 +1,10 @@
 .TransparentBtn{
     background: #00000044;
     border: white solid 1px;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+.width{
+    width: 45%;
 }

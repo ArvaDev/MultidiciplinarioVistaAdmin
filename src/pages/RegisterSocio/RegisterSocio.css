@@ -1,0 +1,62 @@
+div.containerForm {
+    width: 70%;
+    margin: 1% 15%;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    border: 1px solid black;
+    align-items: center;
+    justify-items: center;
+}
+
+.containerForm .title {
+    grid-column: 1/-1;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form.form-regiterSocio {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.form-regiterSocio .container-fields {
+    width: 80%;
+    padding: 6% 10%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+
+.form-regiterSocio .container-img {
+    width: 90%;
+    height: 80%;
+    display: grid;
+    justify-items: center;
+    align-items: end;
+}
+
+
+.container-img .upload-img {
+    width: 100%;
+    height: 100%;
+    border: solid black;
+    object-fit: cover;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+ button.agregarSocio{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    width: 45%;
+    height: 60%;
+
+ }
+
+

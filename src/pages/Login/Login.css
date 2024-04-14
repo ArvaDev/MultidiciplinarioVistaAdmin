@@ -9,35 +9,40 @@
 }
 
 
-.LoginInput{
-    width: 75%;
-}
+
 
 .LoginClass .Form .sesion-title {
     font-family: "Cormorant Garamond", serif;
     font-size: 38px;
-    text-align: center;
+    text-align: justify;
     width: 70%;
     margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 0 10px;
-    
+   
 }
 
 
 
 .container-fields{
-    width: 80%;
+    width: 70%;
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 20%;
+    padding-left: 10%;
     gap: 20px 0;
     overflow: hidden;
+   padding-left: 15%;
 }
 
+.container-fields .flexInput{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
 
 /* Móviles */
 @media (max-width: 768px) {
@@ -48,12 +53,13 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+
     }
 
     .LoginClass .Form {
-        width: 95%;
+        width: 80%;
         height: 85%;
-        margin: 10px;
+        padding: 0 10%;
   
     }
 
@@ -75,7 +81,6 @@
         font-family: 'DS';
         text-align: center;
         font-size: 25px;
-       
         color: white;
     }
 
@@ -99,7 +104,10 @@
 
 /* Escritorio */
 @media (min-width: 769px) {
- 
+    .flexInput {
+        width: 100%;
+  
+    }
     .LoginClass .Form {
         width: 50%;
     }

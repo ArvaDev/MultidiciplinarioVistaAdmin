@@ -1,7 +1,9 @@
-import * as Validate from "./Validations"
+import * as ValidateField from "./ValidateField"
+import FormDataValidation from "./FormDataValidation"
 
 
 
 export {
-    Validate
+    ValidateField,
+    FormDataValidation
 }
