@@ -1,5 +1,6 @@
 import './Bandeja.css'
 import NotList from '../notList/NotList';
+
 export default function Bandeja({state, products}) {
     let s = state ? "auto" : "0"
     console.log(products);

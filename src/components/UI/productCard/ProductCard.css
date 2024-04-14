@@ -1,6 +1,6 @@
 .ProductCardClass{
     overflow: hidden;
-    box-shadow: 0 0 10px 3px #6f6f6f;
+    box-shadow: 0px 0px 5px 1px ;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -9,7 +9,7 @@
 }
 .ProductCardClass .ContainerImg {
     width: 100%;
-    height: 70%;
+    height: 80%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -19,6 +19,7 @@
 .ProductCardClass .ContainerImg img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .ProductCardClass p{
     height: 18%;

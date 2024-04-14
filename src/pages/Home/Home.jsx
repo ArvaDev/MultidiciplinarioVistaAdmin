@@ -1,5 +1,6 @@
 import './Home.css'
-import ProductCard from '../../components/UI/productCard/ProductCard'
+// import ProductCard from '../../components/UI/productCard/ProductCard'
+import CardProduct from '../../components/UI/CardProduct/CardProduct'
 import Header from '../../components/UI/header/Header'
 import TitleLabel from '../../components/UI/titleLabel/TitleLabel'
 import Footer from '../../components/UI/footer/Footer'
@@ -10,11 +11,9 @@ export default function Home() {
             <Header />
             <TitleLabel title="Productos publicados" />
             <div className='ProductosContainer'>
-                <div className='ContainerObjects'>
                     {dataApi.map(ob => (
-                        <ProductCard name={ob.nombre} image={ob.imagen} />
+                        <CardProduct name={ob.nombre} image={ob.imagen} />
                     ))}
-                </div>
             </div>
             <Footer />
         </div>

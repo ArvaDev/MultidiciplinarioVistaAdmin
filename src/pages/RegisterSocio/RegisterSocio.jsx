@@ -8,13 +8,14 @@ import { useField } from "../../Hooks/useField";
 import { useState } from 'react';
 import { FormDataValidation } from '../../utils/api';
 import Header from '../../components/UI/header/Header';
+import { IoEnterOutline } from 'react-icons/io5';
 
 export default function RegisterSocios() {
 
     const [image, setImg] = useState("https://cdn.urbantecno.com/urbantecno/s/2023-01-05-11-27-elon-musk.png");
 
     return (
-        <div>
+        <div className='container-all'>
                <Header/>
             <div className="containerForm">
                 <div className="title">
@@ -46,3 +47,4 @@ export default function RegisterSocios() {
             
     );
 }
+

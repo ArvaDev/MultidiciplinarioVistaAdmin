@@ -36,6 +36,7 @@
     .HeaderClass{
         flex-direction: column;
         overflow: hidden;
+        height: 16vh;
     }
     .HeaderClass .Menu{
         width: 100%;

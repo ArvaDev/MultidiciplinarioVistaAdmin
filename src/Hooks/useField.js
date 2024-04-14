@@ -7,8 +7,7 @@ export const useField  = ({type}) =>{
 
     const onblur = event =>{
         setValue(event.target.value)
-        setMessageError(ValidateField[type](event.target.value));
-    
+        setMessageError(ValidateField[type](event.target.value)); 
     }
 
     return {

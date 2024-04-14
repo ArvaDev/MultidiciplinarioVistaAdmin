@@ -1,18 +1,9 @@
 .ProductosContainer{
-    width: 100%;
+    width: 90%;
+    padding: 0 5%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.HomeClass{
-    overflow: hidden;
-}
-/* móvil */
-@media (max-width: 1243px) {
-    .ContainerObjects{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }    
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 35px 0;
 }
