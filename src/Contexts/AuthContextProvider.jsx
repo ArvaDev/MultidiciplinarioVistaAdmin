@@ -3,8 +3,8 @@ import React, { createContext, useState, useEffect } from "react";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [token, setToken] = useState(null); // Cambiado a token
-  const [user, setUser] = useState(null); // Cambiado a user
+  const [token, setToken] = useState(null); 
+  const [user, setUser] = useState(null); 
 
   useEffect(() => {
     const storedToken = window.localStorage.getItem('token');
@@ -24,8 +24,8 @@ export const AuthProvider = ({ children }) => {
     window.localStorage.setItem('user', JSON.stringify(userData));
     setToken(newToken);
     setUser(userData);
-    console.log("token desde auth: ", token); // Cambiado a token
-    console.log("data desde auth", user); // Cambiado a user
+    console.log("token desde auth: ", token); 
+    console.log("data desde auth", user); 
   };
 
   const logout = () => {

@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { FormDataValidation } from '../../utils/api';
 import { AuthContext } from '../../Contexts/AuthContextProvider';
 import { useContext } from 'react';
+import { Navigate } from 'react-router-dom';
 
 export default function Login() {
     
@@ -16,15 +17,19 @@ export default function Login() {
     const email = useField({ type: "Correo" });
     const [messageError, setMessageError] = useState("");
     const {login} = useContext(AuthContext);
+
     const handlerClick = async (event) => {
         try {
             event.preventDefault();
       
             const value = FormDataValidation([username.value, password.value, email.value]); 
+            
             if (!value) {
                 const {token, dateUser} = await Signin({username, password, email});
                 login(token, dateUser);
-                console.log ({token, dateUser});
+                console.log(token, dateUser);
+                Navigate("/home")
+                
             } else{
                 setMessageError(value);
             }

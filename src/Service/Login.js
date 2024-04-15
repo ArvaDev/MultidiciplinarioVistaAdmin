@@ -1,5 +1,11 @@
 import axios from "axios";
 
+const config = {
+    headers: {
+        'Content-Type': 'application/json'
+    }
+};
+
 export const Signin = (data) => {
     const dateUser = {
        username:  data.username.value,
@@ -8,7 +14,7 @@ export const Signin = (data) => {
     }
 
 
-    return axios.post('http://localhost:4000/api/auth/signin', dateUser) 
+    return axios.post('http://localhost:4000/api/auth/signin', dateUser, config) 
         .then((response) => {
             return response.data;
         })
