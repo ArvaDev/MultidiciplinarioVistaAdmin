@@ -1,5 +1,5 @@
 
-const FormDataValidation = (data) => {
+export const ValidateAllFields = (data) => {
     let messageError = "";
 
     if (data.length == 0) {
@@ -16,4 +16,5 @@ const FormDataValidation = (data) => {
     return messageError;
 };
 
-export default FormDataValidation;
+
+

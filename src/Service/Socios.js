@@ -3,15 +3,15 @@ import axios from "axios";
 
 const config = {
     headers: {
-        'x-access-token': `Bearer ${window.localStorage.getItem('token')}`,
+        'x-access-token': `${window.localStorage.getItem('token')}`,
         'Content-Type': 'application/json'
     }
 };
 
 
-export const addUsuario = (data) => {
+export const getSocios = () => {
 
-    return axios.post(`http://18.233.236.214/api/users`, data, config)
+    return axios.get(`http://localhost:4000/api/users`, config)
         .then((response) => {
             return response.data;
         })

@@ -1,11 +1,14 @@
 import TextField from '../../components/UI/textfield/textfield';
 import BlackBtn from '../../components/UI/blackBtn/BlackBtn';
 import TransparentBtn from '../../components/UI/transparentBtn/TransparentBtn';
+import Header from '../../components/UI/header/Header';
 
 import './Register.css'
 function Register() {
     return (
-        <form action="" className="Register">
+       <div>
+        <Header/>
+         <form action="" className="Register">
             <div className="Form">
                 <p>Registro de Productos</p>
                 <h5>Jotiquetz</h5>
@@ -14,9 +17,10 @@ function Register() {
                     <TextField message="Marca" customClass="textfieldClass" />
                 </div>
                 <div className='flexInput'>
-                    <TextField message="Presentacion" customClass="textfieldClass" />
                     <TextField message="Cantidad" customClass="textfieldClass" />
+                    <TextField message="Precio" customClass="textfieldClass" />
                 </div>
+
                 <div className="flex-img">
                 <TextField message="Descripcion"/>
                 <img src="#" alt="" />
@@ -31,6 +35,7 @@ function Register() {
                 <TransparentBtn message={"Subir"} customClass={"TBClass"} />
             </div>
         </form>
+       </div>
     );
 }
 export default Register;

@@ -19,10 +19,10 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     {/* Rutas protegidas */}
                     <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
-                    <Route path="socios" element={<PrivateRoute><Socios /></PrivateRoute>} />
+                    <Route path="/socios" element={<PrivateRoute><Socios /></PrivateRoute>} />
                     <Route path="/notificaciones" element={<PrivateRoute roles={['Admin', 'Socio']}><Notificaciones /></PrivateRoute>} />
-                    <Route path="registrar-productos" element={<PrivateRoute roles={['Admin']}><Register /></PrivateRoute>} />
-                    <Route path="registrar-socios" element={<PrivateRoute roles={['Admin']}><RegisterSocios /></PrivateRoute>} />
+                    <Route path="/registrar-productos" element={<PrivateRoute roles={['Admin']}><Register /></PrivateRoute>} />
+                    <Route path="/registrar-socios" element={<PrivateRoute roles={['Admin']}><RegisterSocios /></PrivateRoute>} />
                     <Route path="*" element={<NoFound />} />
                 </Routes>
             </Router>

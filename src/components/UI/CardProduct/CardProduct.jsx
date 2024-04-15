@@ -9,21 +9,19 @@ import { RiEditLine } from "react-icons/ri";
 import '../CardProduct/CardProduct.css'
 
 export default function CardProduct({ name, image }) {
-    console.log(image);
     return (
-        <Card sx={{ maxWidth: 300, boxShadow: "0px 0px 5px 1px" }} className='container-cardProducts' >
-            <CardMedia sx={{ height: 270 }} image={image} title="green iguana" />
+        <Card sx={{ maxWidth: 300, boxShadow: "0px 0px 5px 1px", height:"auto" }} className='container-cardProducts' >
+            <CardMedia sx={{ height: 290 }} image={image} title="green iguana" />
 
             <CardContent sx={{ textAlign: "center" }}>
-                <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: "bold" }}> {name} </Typography>
-                <Typography gutterBottom variant="h7" component="div"> Lizard </Typography>
+                <Typography  variant="h7" component="div" sx={{ fontWeight: "bold" }}> {name} </Typography>
+                <Typography  variant="h8" component="div"> Lizard </Typography>
             </CardContent>
 
-            <CardActions sx={{ marginTop: "-12px" }} >
+            <CardActions sx={{ marginTop: "-12px", marginBottom:"10px" }}   >
                 <Button variant="outlined" startIcon={<DeleteIcon />} > Eliminar </Button>
-                <Button variant="outlined" endIcon={<RiEditLine />}> Editar </Button>
+                <Button variant="outlined"   endIcon={<RiEditLine />}> Editar </Button>
             </CardActions>
-            <br /><br />
         </Card>
     );
 }

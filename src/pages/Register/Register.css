@@ -15,17 +15,23 @@
 @media (min-width: 769px) {
     
     .Register {
-        width: 100%;
+        width: 80%;
+        margin: 0% 10%;
         height: 100vh;
         display: flex;
+        justify-content: center;
+        align-items: center;
+ 
     }
 
     div.Form {
-        width: 50%;
+        height: auto;
+        width: 60%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
+        margin-top: -100px;
 
     }
 
@@ -54,15 +60,15 @@
     }
 
     div.Update {
-        width: 50%;
-        height: 100%;
+        width: 40%;
+        height: 75%;
         background-image: url('../../assets/images/img2.png');
         background-size: cover;
         background-position: center;
-        width: 50%;
         display: flex;
         align-items: last baseline;
         justify-content: center;
+        margin-top: -100px;
     }
 
     div.Update-responsive {

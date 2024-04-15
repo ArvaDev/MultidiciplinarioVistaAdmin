@@ -3,7 +3,6 @@ import NotList from '../notList/NotList';
 
 export default function Bandeja({state, products}) {
     let s = state ? "auto" : "0"
-    console.log(products);
     return (
         <div className='BandejaClass' style={{height: s}}>
             <div className='ListHeader'>
@@ -12,8 +11,14 @@ export default function Bandeja({state, products}) {
                 <p>cantidad</p>
                 <p>precio</p>
             </div>
-            {products.map(o => (
-                <NotList producto={o.nombre} presentacion={o.precentacion} cantidad={o.cantidad} precio={o.precio}/>
+            {products.map(producto => (
+                <NotList
+                    key={producto._id} 
+                    producto={producto.idProduct.name} 
+                    presentacion={producto.idProduct.content}
+                    cantidad={producto.quantity}
+                    precio={producto.total_price}
+                />
             ))}
         </div>
     );

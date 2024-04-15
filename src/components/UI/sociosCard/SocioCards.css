@@ -8,8 +8,8 @@
     margin: 1%;
 }
 .SocioCardsClass .Icon{
+    width: 35%;
     height: 100%;
-    width: 25%;
     display: flex;
     align-items: center;
     font-size: 400px;
@@ -37,14 +37,15 @@
 }
 
 .Icon .perfil-avatar{
-    width: 80%;
-    height: 60%;
+    width: 82%;
+    height: 82%;
     border-radius: 50%;
     object-fit: cover;
 }
 
 /* escritorio */
 @media (min-width: 1244px) {
+    
     .SocioCardsClass{
         width: 47%;
         height: 130px;
@@ -72,8 +73,10 @@
 }
 /* móvil */
 @media (max-width: 1243px) {
+    
     .SocioCardsClass{
-        width: 90%;
+        width: 70%;
+        margin: 10px 15%;
         height: 150px;
     }
     .SocioCardsClass .Icon{
@@ -111,3 +114,5 @@
     
 
 }
+    
+

@@ -1,7 +1,7 @@
 import * as ValidateField from "./ValidateField"
-import FormDataValidation from "./FormDataValidation"
+import * as FormDataValidation from "./FormDataValidation"
 
-
+    
 
 export {
     ValidateField,

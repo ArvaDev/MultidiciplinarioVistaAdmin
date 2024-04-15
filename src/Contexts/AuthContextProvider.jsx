@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null); 
   const [user, setUser] = useState(null); 
-
+  
   useEffect(() => {
     const storedToken = window.localStorage.getItem('token');
     const storedUser = JSON.parse(window.localStorage.getItem('user'));
@@ -33,6 +33,7 @@ export const AuthProvider = ({ children }) => {
     window.localStorage.removeItem('user');
     setToken(null);
     setUser(null);
+    window.location.pathname = "/login"
   };
 
   return (

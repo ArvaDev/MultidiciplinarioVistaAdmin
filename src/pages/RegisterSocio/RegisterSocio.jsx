@@ -1,14 +1,12 @@
 import './RegisterSocio.css';
 import TextField from "../../components/UI/textfield/textfield";
 import TransparentBtn from '../../components/UI/transparentBtn/TransparentBtn';
-import BlackBtn from '../../components/UI/blackBtn/BlackBtn';
 import AlertError from "../../components/UI/Error/AlertError";
 import { Signin } from "../../Service/Login";
 import { useField } from "../../Hooks/useField";
 import { useState } from 'react';
-import { FormDataValidation } from '../../utils/api';
 import Header from '../../components/UI/header/Header';
-import { IoEnterOutline } from 'react-icons/io5';
+
 
 export default function RegisterSocios() {
 

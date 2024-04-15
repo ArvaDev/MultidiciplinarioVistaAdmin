@@ -8,39 +8,50 @@ import { useState } from 'react';
 import { FormDataValidation } from '../../utils/api';
 import { AuthContext } from '../../Contexts/AuthContextProvider';
 import { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-    
+
     const username = useField({ type: "Nombre" });
     const password = useField({ type: "Contraseña" });
     const email = useField({ type: "Correo" });
     const [messageError, setMessageError] = useState("");
-    const {login} = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handlerClick = async (event) => {
         try {
             event.preventDefault();
-      
-            const value = FormDataValidation([username.value, password.value, email.value]); 
-            
+            setMessageError("");
+            const value = FormDataValidation.ValidateAllFields([username.value, password.value, email.value]);
+
             if (!value) {
-                const {token, dateUser} = await Signin({username, password, email});
-                login(token, dateUser);
-                console.log(token, dateUser);
-                Navigate("/home")
-                
-            } else{
+                const { data, error } = await Signin({ username, password, email });
+
+                if (data) {
+                    const { token, dateUser } = data;
+                    login(token, dateUser);
+                    navigate("/home");
+
+                } else if (error) {
+                    if (error.status === 401) {
+                        setMessageError("Credenciales incorrectas. Verifique sus datos.");
+                    } else {
+                        setMessageError("Error en la solicitud de inicio de sesión. Inténtelo de nuevo más tarde.");
+                    }
+                }
+            } else {
                 setMessageError(value);
             }
-
         } catch (error) {
             console.log(error);
         }
-    }
+    };
+
+
 
     return (
-            <div className="LoginClass">
+        <div className="LoginClass">
             <form onSubmit={handlerClick} className="Form">
                 <div className="container-fields">
                     <span className="sesion-title">Inicio de sesión <img src="../../../public/logo.png" height={"30px"} />  </span>
