@@ -3,31 +3,41 @@ import React, { createContext, useState, useEffect } from "react";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const [token, setToken] = useState(null); // Cambiado a token
+  const [user, setUser] = useState(null); // Cambiado a user
 
-    const [token, setToken] = useState(window.localStorage.getItem('token') || null);
+  useEffect(() => {
+    const storedToken = window.localStorage.getItem('token');
+    const storedUser = JSON.parse(window.localStorage.getItem('user'));
 
-    useEffect (() => {
-        const storedToken = window.localStorage.getItem('token'); 
-        if (storedToken){
-            setToken(storedToken);
-        }
-    }, []);
+    if (storedToken) {
+      setToken(storedToken);
+    }
 
-    const login = (token) => {
-        window.localStorage.setItem('token', token);
-        setToken(token);
-    };
+    if (storedUser) {
+      setUser(storedUser);
+    }
+  }, []);
 
-    const logout = () => {
-        window.localStorage.removeItem('token');
-        setToken(null);
-    };
+  const login = (newToken, userData) => {
+    window.localStorage.setItem('token', newToken);
+    window.localStorage.setItem('user', JSON.stringify(userData));
+    setToken(newToken);
+    setUser(userData);
+    console.log("token desde auth: ", token); // Cambiado a token
+    console.log("data desde auth", user); // Cambiado a user
+  };
 
-    return (
-        <AuthContext.Provider value={{ token, login, logout }}>
-            {children}
-        </AuthContext.Provider>
-    );
-}
+  const logout = () => {
+    window.localStorage.removeItem('token');
+    window.localStorage.removeItem('user');
+    setToken(null);
+    setUser(null);
+  };
 
-
+  return (
+    <AuthContext.Provider value={{ token, user, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};

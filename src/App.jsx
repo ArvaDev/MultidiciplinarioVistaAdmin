@@ -18,9 +18,9 @@ function App() {
 
                     {/* Rutas protegidas */}
                     <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
-                    <Route path="/socios" element={<PrivateRoute><Socios /></PrivateRoute>} />
-                    <Route path="/notificaciones" element={<PrivateRoute roles={['admin', 'user']}><Notificaciones /></PrivateRoute>} />
-                    <Route path="/registrar-socios" element={<PrivateRoute roles={['admin']}><RegisterSocios /></PrivateRoute>} />
+                    <Route path="socios" element={<PrivateRoute><Socios /></PrivateRoute>} />
+                    <Route path="/notificaciones" element={<PrivateRoute roles={['Admin', 'Socio']}><Notificaciones /></PrivateRoute>} />
+                    <Route path="registrar-socios" element={<PrivateRoute roles={['Admin']}><RegisterSocios /></PrivateRoute>} />
                     <Route path="*" element={<NoFound />} />
                 </Routes>
             </Router>

@@ -7,7 +7,8 @@ export const Signin = (data) => {
         email: data.email.value
     }
 
-    return axios.post('http://18.233.236.214/api/auth/signin', dateUser) 
+
+    return axios.post('http://localhost:4000/api/auth/signin', dateUser) 
         .then((response) => {
             return response.data;
         })
