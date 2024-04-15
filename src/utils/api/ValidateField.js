@@ -35,3 +35,35 @@ export const Correo = (correo) => {
     }
 };
 
+// Nuevo añadido
+export const Telefono = (telefono) => {
+    if (telefono === ''){
+        return "El campo esta vacio";
+    }else{
+        return null;
+    }
+}
+
+export const Cantidad = (cantidad) => {
+    if (cantidad < 0){
+        return "La cantidad no puede ser un numero negativo";
+    }else{
+        return null;
+    }
+}
+
+export const Precio = (precio) => {
+    if(precio <= 0){
+        return "No puedes poner un precio menor";
+    }else{
+        return null;
+    }
+}
+
+export const ValidarString = (string) => {
+    if (string === ''){
+        return "El campo esta vacio"
+    }else{
+        return null;
+    }
+}

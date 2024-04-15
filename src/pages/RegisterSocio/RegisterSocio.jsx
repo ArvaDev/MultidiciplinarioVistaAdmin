@@ -5,11 +5,16 @@ import AlertError from "../../components/UI/Error/AlertError";
 import { Signin } from "../../Service/Login";
 import { useField } from "../../Hooks/useField";
 import { useState } from 'react';
+import { ValidateField } from '../../utils/api';
 import Header from '../../components/UI/header/Header';
 
 
 export default function RegisterSocios() {
 
+    const tel = useField({type: "Telefono"})
+    const user = useField({type: "Nombre"})
+    const pass = useField({type: "Contraseña"})
+    const mail = useField({type: "Correo"})
     const [image, setImg] = useState("https://cdn.urbantecno.com/urbantecno/s/2023-01-05-11-27-elon-musk.png");
 
     return (
@@ -22,12 +27,12 @@ export default function RegisterSocios() {
                 </div>
                 <form action="" className='form-regiterSocio'>
                     <div className="container-fields">
-                        <TextField message="Usuario: " customClass="LoginInput" />
+                        <TextField message="Usuario: " customClass="LoginInput" onblur={user.onblur} />
                         {/* {username.messageError && <AlertError message={username.messageError} />} */}
-                        <TextField message="Contraseña: " customClass="LoginInput" type="password" />
+                        <TextField message="Contraseña: " customClass="LoginInput" type="password" onblur={pass.onblur}/>
                         {/* {password.messageError && <AlertError message={password.messageError} />} */}
-                        <TextField message="Telefono: " customClass="LoginInput" type="text" />
-                        <TextField message="Email: " customClass="LoginInput" type={"text"} />
+                        <TextField message="Telefono: " customClass="LoginInput" type="text" onblur={tel.onblur}/>
+                        <TextField message="Email: " customClass="LoginInput" type={"text"} onblur={mail.onblur}/>
                         {/* {email.messageError && <AlertError message={email.messageError} />} */}
                     </div>
 

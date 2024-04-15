@@ -4,10 +4,9 @@ import BlackBtn from "../../components/UI/blackBtn/BlackBtn";
 import AlertError from "../../components/UI/Error/AlertError";
 import { Signin } from "../../Service/Login";
 import { useField } from "../../Hooks/useField";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { FormDataValidation } from '../../utils/api';
 import { AuthContext } from '../../Contexts/AuthContextProvider';
-import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
@@ -47,9 +46,6 @@ export default function Login() {
             console.log(error);
         }
     };
-
-
-
     return (
         <div className="LoginClass">
             <form onSubmit={handlerClick} className="Form">
