@@ -8,6 +8,7 @@ import Socios from "./pages/Socios/Socios";
 import Notificaciones from "./pages/Notificationes/Notificaciones";
 import RegisterSocios from "./pages/RegisterSocio/RegisterSocio";
 import Register from "./pages/Register/Register";
+import Stadistic from "./pages/Stadistic/Stadistic"
 import NoFound from "./pages/NoFound/NoFound";
 
 function App() {
@@ -16,8 +17,10 @@ function App() {
         <AuthProvider>
             <Router>
                 <Routes>
+                    <Route path="/" element={<Login />} />
                     <Route path="/login" element={<Login />} />
                     {/* Rutas protegidas */}
+                    <Route path="/home/estadisticas" element={<Stadistic/>}/>
                     <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
                     <Route path="/socios" element={<PrivateRoute><Socios /></PrivateRoute>} />
                     <Route path="/notificaciones" element={<PrivateRoute roles={['Admin', 'Socio']}><Notificaciones /></PrivateRoute>} />
