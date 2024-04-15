@@ -20,7 +20,6 @@ export default function Login() {
         try {
             event.preventDefault();
       
-
             const value = FormDataValidation([username.value, password.value, email.value]); 
             if (!value) {
                 const {token, dateUser} = await Signin({username, password, email});
