@@ -10,7 +10,7 @@ export default function Menu() {
         <div className="MenuClass">
             <Link className='LinkClass' to="/home">Home</Link>
             <Link className='LinkClass' to="/socios">Socios</Link>
-            <Link className='LinkClass' to="/">Estadisticas</Link>
+            <Link className='LinkClass' to="/home/estadisticas">Estadisticas</Link>
             <Link className='LinkClass' to="/notificaciones">Notificaciones</Link>
             <MoreMenu/>
         </div>

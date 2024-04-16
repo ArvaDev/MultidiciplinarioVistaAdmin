@@ -39,12 +39,18 @@ export const Correo = (correo) => {
 
 // Nuevo añadido
 export const Telefono = (telefono) => {
+    const telefonoRegex = /^\+[0-9]{1,3}\s?[0-9]{6,}$/;
+
     if (telefono === ''){
-        return "El campo esta vacio";
-    }else{
+        return "El campo está vacío";
+    } else if (!telefono.match(telefonoRegex)) {
+        return "El número de teléfono debe comenzar con '+' y contener de 6 a más dígitos";
+    } else {
         return null;
     }
 }
+
+
 
 export const Cantidad = (cantidad) => {
     if (cantidad < 0){

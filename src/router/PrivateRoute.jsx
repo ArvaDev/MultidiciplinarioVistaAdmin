@@ -9,7 +9,7 @@ const PrivateRoute = ({ children, roles }) => {
     const isAuthenticated = !!token && user;
     const userRole = user ? user.roles : null;
     const hasAccess = isAuthenticated && (roles === undefined || roles.includes(userRole[0]));
-    return hasAccess ? children : <Navigate to="/login" replace />;
+    return hasAccess ? children : <Navigate to="/" replace />;
 };
 
 export default PrivateRoute;

@@ -1,14 +1,12 @@
 import axios from "axios";
 
-const config = {
-    headers: {
-        'x-access-token': `Bearer ${window.localStorage.getItem('token')}`,
-        'Content-Type': 'application/json'
-    }
-};
-
 export const getProducts = () => {
-    return axios.get('http://localhost:4000/products')
+      const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    return axios.get('http://localhost:4000/products', config)
         .then((response) => {
             return response.data;
         })
@@ -19,7 +17,17 @@ export const getProducts = () => {
 };
 
 export const getByIdProducts = (idProduct) => {
-    return axios.get(`http://18.233.236.214/products${idProduct}` )
+
+    const token = window.localStorage.getItem('token');
+
+    const config = {
+        headers: {
+            'x-access-token': token,
+            'Content-Type': 'application/json'
+        }
+    };
+
+    return axios.get(`http://localhost:4000/products${idProduct}`, config )
         .then((response) => {
             return response.data;
         })
@@ -31,15 +39,18 @@ export const getByIdProducts = (idProduct) => {
 
 
 export const deleteProductById = (idProduct) => {
+    const token = window.localStorage.getItem('token');
+
     const config = {
         headers: {
-            'x-access-token': `Bearer ${window.localStorage.getItem('token')}`
+            'x-access-token': token,
+            'Content-Type': 'application/json'
         }
     };
 
-    return axios.delete(`http://18.233.236.214/products${idProduct}`, config)
+    return axios.delete(`http://localhost:4000/products/${idProduct}`, config)
         .then((response) => {
-            return response.data;
+            return { message: "Producto eliminado correctamente" };
         })
         .catch((error) => {
             console.error('Error al cargar el producto:', error);

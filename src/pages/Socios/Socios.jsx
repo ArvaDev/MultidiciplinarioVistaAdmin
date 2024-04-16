@@ -13,9 +13,8 @@ export default function Socios() {
     useEffect(() => {
         const fetchSocios = async () => {
             try {
-              
-                setSocios(await getSocios());
-
+                const dateSocio = await getSocios();
+                setSocios(dateSocio);
             } catch (error) {
                 console.log(error);
             }
@@ -38,6 +37,7 @@ export default function Socios() {
                                 tel={socio.telefono}
                                 mail={socio.email}
                                 perfil={socio.img}
+                                idSocio={socio.id}
                             />
                         ))
                     }

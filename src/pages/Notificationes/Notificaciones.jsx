@@ -4,12 +4,14 @@ import Notificacion from '../../components/UI/notificacion/Notificacion';
 import TitleLabel from '../../components/UI/titleLabel/TitleLabel';
 import { getOrders } from '../../Service/Orders';
 import { useState, useEffect } from 'react';
+
 export default function Notificaciones() {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         const fetchOrders = async () => {
             try {
                 const ordersData = await getOrders();
+                console.log(ordersData);
                 setOrders(ordersData.orders);
 
             } catch (error) {

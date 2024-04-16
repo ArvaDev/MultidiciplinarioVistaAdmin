@@ -4,11 +4,12 @@ import CardProduct from '../../components/UI/CardProduct/CardProduct'
 import Header from '../../components/UI/header/Header'
 import TitleLabel from '../../components/UI/titleLabel/TitleLabel'
 import Footer from '../../components/UI/footer/Footer'
-import { getProducts } from '../../Service/Products'
+import { getProducts} from '../../Service/Products'
 import { useState, useEffect } from 'react'
 
 export default function Home() {
     const [products, setProducts] = useState([]);
+
     useEffect(()=>{
             const fetchProducts = async ()=>{
                 try {
@@ -29,7 +30,10 @@ export default function Home() {
         
             <div className='ProductosContainer'>
                     {products.map(product => (
-                        <CardProduct key={product._id} name={product.name} image={product.imgUrl} />
+                        <CardProduct key={product._id} 
+                                    name={product.name}
+                                    image={product.imgUrl}
+                                    idProduct={product._id} />
                     ))}
             </div>
             <Footer />

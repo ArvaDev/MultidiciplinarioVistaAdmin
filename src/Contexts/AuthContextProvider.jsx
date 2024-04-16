@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
     window.localStorage.removeItem('user');
     setToken(null);
     setUser(null);
-    window.location.pathname = "/login"
+    window.location.pathname = "/"
   };
 
   return (

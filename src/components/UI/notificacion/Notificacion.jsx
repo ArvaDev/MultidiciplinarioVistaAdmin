@@ -4,7 +4,9 @@ import { useState } from 'react'
 import { BiSolidUserCircle } from "react-icons/bi"
 import { FaCheckCircle } from "react-icons/fa"
 import { FaTrashCan } from "react-icons/fa6"
+
 export default function Notificacion({ user, mail, status, id, productos}) {    
+    console.log(productos);
     const [state, setState] = useState (false)
     const click = () =>{
         setState(!state);
