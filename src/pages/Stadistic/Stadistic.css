@@ -6,6 +6,11 @@
         background: gray;
         width: 100%;
         height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 900;
     }
 
     .content {
@@ -17,7 +22,7 @@
 
         .DataCont {
             overflow: hidden;
-            width: 30%;
+            width: 37%;
             height: 90%;
             border: solid 1px black;
             border-radius: 20px;
@@ -36,9 +41,17 @@
             }
 
             .info{
-                color: black;
-                border: none;
-                font-weight: 100;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                border-bottom: solid 1px #3e3e3e;
+                p{
+                    color: black;
+                    margin: 10px 0;
+                    border: none;
+                    font-weight: 100;
+                }
             }
         }
     }
