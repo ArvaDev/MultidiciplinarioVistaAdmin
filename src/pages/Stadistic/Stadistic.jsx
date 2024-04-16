@@ -1,29 +1,35 @@
 import './Stadistic.css'
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import { api } from './ApiE'
-import { getOrders } from '../../Service/Orders';
+import GetStatics from '../../Service/Statics';
+
+
 export default function Stadistic() {
     const chartRef = useRef();
     const products = []
+    const [data, setData] = useState([]);
     const amount = []
     api.map((o) => {
         products.push(o.name)
         amount.push(o.amount)
     })
 
+
+
     useEffect(() => {
-        try{
-            const getOrd = () => {
-                const data = getOrders();
-                console.log(data)
-            } 
-    
-            getOrd();
-        }catch(error){
-            console.error(error)
+        const getStatics = async () => {
+            try { 
+                const data = await GetStatics();
+                console.log(data);
+
+            } catch (error) {
+                console.log(error);
+            }
         }
-    }, [])
+        getStatics();
+    }, []);
+   
 
     useEffect(() => {
         const ctx = chartRef.current.getContext('2d');

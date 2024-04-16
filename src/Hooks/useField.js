@@ -4,7 +4,7 @@ import { ValidateField } from "../utils/api";
 export const useField  = ({type}) =>{
     const [value, setValue] = useState("");
     const [messageError, setMessageError] = useState("");
-
+    
     const onblur = event =>{
         setValue(event.target.value)
         setMessageError(ValidateField[type](event.target.value)); 
