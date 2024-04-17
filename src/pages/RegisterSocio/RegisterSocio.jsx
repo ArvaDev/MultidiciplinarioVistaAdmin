@@ -31,9 +31,7 @@ export default function RegisterSocios() {
             const value = FormDataValidation.ValidateAllFields([user.value, pass.value, mail.value, tel.value]);
 
             if (!value && !img.message) {
-                console.log(img.message);
                 const getUrlImg = await uploadImgDrive(img.image);
-                console.log(getUrlImg);
                 const response = await addSocio({
                     username :user.value,
                     password :pass.value,

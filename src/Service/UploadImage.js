@@ -5,7 +5,7 @@ export const uploadImgDrive= async (file) => {
   formData.append('file', file);
 
   try {
-    const response = await axios.post('http://localhost:4000/image/post', formData, {
+    const response = await axios.post('http://18.233.236.214/image/post', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

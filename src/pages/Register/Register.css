@@ -49,6 +49,10 @@
         font-family: 'DS';
     }
 
+    .Form .pres{
+        width: 70%;
+    }
+
     .Form .flexInput {
         width: 73%;
         display: flex;
@@ -58,11 +62,13 @@
     .Form .textfieldClass {
         width: 45%;
     }
+    .Form .textfieldClass3 {
+        width: 96%;
+    }
 
     div.Update {
         width: 40%;
         height: 75%;
-        background-image: url('../../assets/images/img2.png');
         background-size: cover;
         background-position: center;
         display: flex;
@@ -102,7 +108,6 @@
     .Form .flexInput{
         width: 70%;
     }
-
     .Form .textfieldClass {
         width: 100%;
     }
@@ -112,7 +117,6 @@
         width: 70%;
         height: 400px;
         display: flex;
-        background-image: url('../../assets/images/img2.png');
         background-size: cover;
         background-position: center;
         align-items: last baseline; 
@@ -125,7 +129,4 @@
         margin: 40px 0;
         
     }
-
-   
-
 }

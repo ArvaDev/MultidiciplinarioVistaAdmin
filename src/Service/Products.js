@@ -6,7 +6,7 @@ export const getProducts = () => {
             'Content-Type': 'application/json'
         }
     };
-    return axios.get('http://localhost:4000/products', config)
+    return axios.get('http://18.233.236.214/products', config)
         .then((response) => {
             return response.data;
         })
@@ -27,7 +27,7 @@ export const getByIdProducts = (idProduct) => {
         }
     };
 
-    return axios.get(`http://localhost:4000/products${idProduct}`, config )
+    return axios.get(`http://18.233.236.214products${idProduct}`, config )
         .then((response) => {
             return response.data;
         })
@@ -48,7 +48,7 @@ export const deleteProductById = (idProduct) => {
         }
     };
 
-    return axios.delete(`http://localhost:4000/products/${idProduct}`, config)
+    return axios.delete(`http://18.233.236.214/products/${idProduct}`, config)
         .then((response) => {
             return { message: "Producto eliminado correctamente" };
         })

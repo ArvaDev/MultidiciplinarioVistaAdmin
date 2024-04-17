@@ -1,0 +1,21 @@
+.TextAreaClass{
+    display: flex;
+    flex-direction: column;
+}
+.TextAreaClass label{
+    font-size: 12px;
+    padding: 5px 0px;
+}
+.TextAreaClass textarea{
+    border: solid 1px #cecece;
+    border-bottom: solid 2px #4f4f4f;
+    outline: none;
+    max-height: 20vh;
+    min-height: 20vh;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.TextAreaClass textarea:hover{
+    border-bottom: solid 2px black;
+}
