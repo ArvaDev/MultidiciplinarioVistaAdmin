@@ -1,7 +1,7 @@
 import './SocioCards.css'
 import { useState } from 'react';
 import { FaTrashCan } from "react-icons/fa6"
-import * as MessageSocios from "../../../utils/api/MessageSocios"
+import * as MessageSocios from "../../../utils/ErrorMessage/MessageSocios"
 import { deleteByIdSocios } from '../../../Service/Socios';
 import CustomModal from '../modal/modal';
 
@@ -16,7 +16,7 @@ export default function SocioCards({ name, mail, tel, perfil, idSocio }) {
         try {
                 
             const correct = await deleteByIdSocios(id);
-                console.log(correct);
+        
             if (correct) {
                 setMessage(MessageSocios.messageDeleteSocio(true));
                 setRecargar(true);

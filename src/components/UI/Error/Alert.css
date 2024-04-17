@@ -1,0 +1,50 @@
+/* Estilos base para las alertas */
+span.error-message-fields,
+span.error-message-login,
+span.error-img {
+    color: red;
+    font-size: 14px;
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+span.error-message-fields {
+    margin: -20px 0;
+    justify-content: start;
+}
+
+span.error-message-login {
+    margin: 0;
+}
+
+span.error-img {
+    position: absolute;
+    top: 102%;
+}
+
+span.center-message{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin: 14px 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    span.error-message-fields {
+        font-size: 13px;
+        margin: -15px 0; /* Ajusta el margen para dispositivos móviles */
+    }
+
+    span.error-message-login {
+        font-size: 13px;
+    }
+
+    span.error-img {
+        top: 105%; /* Ajusta la posición para dispositivos móviles */
+    }
+}

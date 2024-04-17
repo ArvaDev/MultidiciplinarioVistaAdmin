@@ -3,6 +3,7 @@ import axios from "axios";
 const GetStatics = () => {
     
     const token = window.localStorage.getItem('token');
+    
     const date ={
         "startDate": "2024-02-31",
          "endDate": "2024-04-31"

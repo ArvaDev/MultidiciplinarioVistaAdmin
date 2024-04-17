@@ -1,5 +1,5 @@
 import * as ValidateField from "./ValidateField"
-import * as FormDataValidation from "./FormDataValidation"
+import * as FormDataValidation from "./ValidateAllFields"
 
     
 

@@ -1,124 +1,114 @@
-div.container-all{
+/* Estilos para pantallas de escritorio y laptops */
+div.container-all {
     width: 100%;
-    height: 100%;
+    overflow: hidden;
 }
 
- @media (min-width: 769px) {
+div.containerForm {
+    width: 80%;
+    height: 100%;
+    margin: 15px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.containerForm .title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 10px 0;
+}
+
+form.form-regiterSocio {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-regiterSocio .container-fields-socio {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 10% 15px 10%;
+}
+
+.form-regiterSocio .container-img {
+    width: 40%;
+    height: 415px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    align-items: end;
+    background-size: cover;
+    background-position: center center;
+    border: solid black;
+}
+
+div.container-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div.container-button .agregarSocio {
+    width: 35%;
+    height: 50px;
+    margin-top: 55px;
+}
+
+h2.imgTitle-logo {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: center;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+img.logo-h2 {
+    height: 100%;
+    object-fit: cover;
+}
+
+p.decription-add {
+    width: 30%;
+    text-align: center;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
     div.containerForm {
-        width: 70%;
-        margin: 1% 15%;
-        height: 95vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 4fr;
-        border: 1px solid black;
-        align-items: center;
-        justify-items: center;
+        width: 90%;
+        margin: 15px 5%;
     }
-    
-    .containerForm .title {
-        grid-column: 1/-1;
-        text-align: center;
-        margin-bottom: 15px;
+
+    .form-regiterSocio .container-fields-socio {
+        width: 100%;
+        padding: 15px 5%;
     }
-    
-    form.form-regiterSocio {
-        grid-column: 1/-1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row: 1fr 1fr;
-        justify-items: center;
+
+    .form-regiterSocio .container-img {
+        width: 100%;
         margin-top: 20px;
     }
-    
-    .form-regiterSocio .container-fields {
-        width: 80%;
-        padding: 6% 10%;
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    
-    
-    .form-regiterSocio .container-img {
-        width: 90%;
-        height: 80%;
-        display: grid;
-        justify-items: center;
-        align-items: end;
-    }
-    
-    
-    .container-img .upload-img {
-        width: 100%;
-        height: 100%;
-        border: solid black;
-        object-fit: cover;
-        grid-column: 1/-1;
-        grid-row: 1/-1;
-    }
-    
-     button.agregarSocio{
-        grid-column: 1/-1;
-        grid-row: 2/3;
-        width: 45%;
-        height: 60%;
-    
-     }
-    
- }
 
-
- @media (max-width: 768px) {    
-    div.containerForm {
-        width: 100%;
-        height: 95vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .containerForm .title {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    form.form-regiterSocio {
-       display: flex;
-       flex-wrap: wrap;
-       width: 100%;
-    }
-
-    .form-regiterSocio .container-fields {
-        width: 80%;
-        height: 50%;
-    }
-
-    .form-regiterSocio .container-img {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        justify-items: center;
-        align-items: end;
-        overflow: hidden;
-    }
-
-    .container-img .upload-img {
+    div.container-button .agregarSocio {
         width: 70%;
-        height: auto;
-        object-fit: cover;
-        grid-column: 1/-1;
-        grid-row: 1/-1;
-        border: solid black;
+        margin-top: 30px;
     }
 
-    button.agregarSocio{
-        width: 100%;
-        height: 6%;
-     }
-    
-    
-    
- }
+    p.decription-add {
+        width: 90%;
+    }
+}
+
+
+

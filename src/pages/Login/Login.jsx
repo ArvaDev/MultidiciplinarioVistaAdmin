@@ -5,7 +5,7 @@ import AlertError from "../../components/UI/Error/AlertError";
 import { Signin } from "../../Service/Login";
 import { useField } from "../../Hooks/useField";
 import { useState, useContext } from 'react';
-import { FormDataValidation } from '../../utils/api';
+import { FormDataValidation } from '../../utils/Form';
 import { AuthContext } from '../../Contexts/AuthContextProvider';
 import { useNavigate } from 'react-router-dom';
 
@@ -50,15 +50,41 @@ export default function Login() {
         <div className="LoginClass">
             <form onSubmit={handlerClick} className="Form">
                 <div className="container-fields">
-                    <span className="sesion-title">Inicio de sesión <img src="../../../public/logo.png" height={"30px"} />  </span>
-                    <TextField message="Usuario: " customClass="LoginInput" onblur={username.onblur} />
-                    {username.messageError && <AlertError message={username.messageError} />}
-                    <TextField message="Email: " customClass="LoginInput" onblur={email.onblur} />
-                    {email.messageError && <AlertError message={email.messageError} />}
-                    <TextField message="Contraseña: " customClass="LoginInput" type="password" onblur={password.onblur} />
-                    {password.messageError && <AlertError message={password.messageError} />}
-                    <BlackBtn message="Iniciar sesión" width="100%" type={'submit'} />
-                    {messageError && <AlertError message={messageError} />}
+                    <span className="sesion-title">
+                        Inicio de sesión
+                        <img src="../../../public/logo.png" height={"30px"} />
+                    </span>
+                    
+                    <TextField
+                        message="Usuario: "
+                        customClass="LoginInput"
+                        onblur={username.onblur}
+                        onchange={username.onblur} />
+                    {username.messageError &&
+                        <AlertError message={username.messageError} className={"error-message-login"} />}
+
+                    <TextField
+                        message="Email: "
+                        customClass="LoginInput"
+                        onblur={email.onblur}
+                        onchange={email.onblur} />
+                    {email.messageError &&
+                        <AlertError message={email.messageError} className={"error-message-login"} />}
+
+                    <TextField
+                        message="Contraseña: "
+                        customClass="LoginInput" type="password"
+                        onblur={password.onblur}
+                        onchange={password.onblur} />
+                    {password.messageError &&
+                        <AlertError message={password.messageError} className={"error-message-login"} />}
+
+                    <BlackBtn
+                        message="Iniciar sesión"
+                        width="100%"
+                        type={'submit'} />
+                    {messageError &&
+                        <AlertError message={messageError} className={"error-message-login"} />}
                 </div>
             </form>
             <div className="Image"> <p>Cooperativa pimienta Jotiquetz</p> </div>

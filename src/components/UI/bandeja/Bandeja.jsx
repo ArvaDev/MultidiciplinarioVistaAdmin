@@ -2,7 +2,7 @@ import './Bandeja.css'
 import NotList from '../notList/NotList';
 
 export default function Bandeja({state, products}) {
-    console.log("pro", products);
+    console.log("bandeja", products);
     let s = state ? "auto" : "0"
     return (
         <div className='BandejaClass' style={{height: s}}>

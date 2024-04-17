@@ -49,4 +49,24 @@ export const deleteByIdSocios = (IdSocio) => {
         });
 }
 
+export const addSocio = (data) =>{
+    
+    const token = window.localStorage.getItem('token');
+    const config = {
+        headers: {
+            'x-access-token': token,
+            'Content-Type': 'application/json'
+        }
+    };
 
+    return axios.post(`http://localhost:4000/api/users`, data, config)
+    .then((response) => {
+        return response.data;
+    })
+    .catch((error) => {
+        console.error('Hubo un error al intentar agregar el usuario:', error);
+        throw error.response;
+    });
+
+    
+}

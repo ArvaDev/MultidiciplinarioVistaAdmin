@@ -9,7 +9,7 @@ import { RiEditLine } from "react-icons/ri";
 import '../CardProduct/CardProduct.css'
 import { useState } from 'react';
 import CustomModal from '../modal/modal';
-import * as MessageProduct from "../../../utils/api/MessageProducts"
+import * as MessageProduct from "../../../utils/ErrorMessage/MessageProducts"
 import { deleteProductById } from '../../../Service/Products';
 export default function CardProduct({ name, image,  idProduct }) {
 

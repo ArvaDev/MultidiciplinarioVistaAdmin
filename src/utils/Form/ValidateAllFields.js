@@ -8,7 +8,7 @@ export const ValidateAllFields = (data) => {
         for (let i = 0; i < data.length; i++) {
             if (!data[i] || data[i].trim() === "") {
                 messageError = "Por favor, complete todos los campos.";
-                break; // Detenemos la iteración en cuanto encontramos un campo vacío
+                break; 
             }
         }
     }
