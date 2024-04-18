@@ -14,8 +14,9 @@ export const uploadImgDrive= async (file) => {
     if (!response.data || response.data.error) {
       throw new Error('Error al subir la imagen');
     }
-  
-    return `https://drive.google.com/uc?id=${response.data.data.id}`
+   
+    return `https://drive.google.com/thumbnail?id=${response.data.data.id}`
+     
 
   } catch (error) {
     console.error('Error:', error);
