@@ -10,7 +10,7 @@ export const getOrders = () => {
         }
     };
 
-    return axios.get('http://localhost:4000/api/v1/orders', config)
+    return axios.get('http://18.233.236.214/api/v1/orders', config)
         .then((response) => {
             return response.data;
         })

@@ -12,7 +12,7 @@ export default function Notificaciones() {
         const fetchOrders = async () => {
             try {
                 const ordersData = await getOrders();
-                console.log(ordersData);
+                console.log(ordersData)
                 setOrders(ordersData.orders);
             } catch (error) {
                 console.log(error);
@@ -20,13 +20,13 @@ export default function Notificaciones() {
         };
         fetchOrders();
     }, []);
-
     return (
         <div className='NotificacionesClass'>
             <Header />
             <TitleLabel title={`Notificaciones`} />
             <div className='ContainerNot'>
-                {orders.length > 0 ? (
+                {(
+                    orders !== undefined ?
                     orders.map((order, index) => (
                         <Notificacion
                             key={order._id} 
@@ -36,11 +36,11 @@ export default function Notificaciones() {
                             status={order.status}
                             productos={order.products}
                         />
-                    ))
-                ) : (
-                    <p>No hay notificaciones disponibles</p>
+                    )) :
+                    <p>No hay productros disponibles</p>
                 )}
             </div>
         </div>
     );
+    
 }

@@ -4,13 +4,38 @@ import { useState } from 'react'
 import { BiSolidUserCircle } from "react-icons/bi"
 import { FaCheckCircle } from "react-icons/fa"
 import { FaTrashCan } from "react-icons/fa6"
-
-export default function Notificacion({ user, mail, status, id, productos}) {    
-    console.log(productos);
-    const [state, setState] = useState (false)
-    const click = () =>{
+import axios from 'axios'
+export default function Notificacion({ user, mail, status, id, productos }) {
+    const [state, setState] = useState(false)
+    const click = () => {
         setState(!state);
     }
+
+    const aceptar = () => {
+        const token = window.localStorage.getItem('token');
+        console.log("click")
+        const object = {
+            "id": [id],
+            "status": "Completado",
+        }
+       console.log(object)
+        const config = {
+            
+            headers: {
+                'x-access-token': token,
+                'Content-Type': 'application/json'
+            }
+        };
+        return axios.patch('http://18.233.236.214/api/v1/orders', object, config)
+            .then((response) => {
+                return response.data;
+            })
+            .catch((error) => {
+                console.log('Error al cargar productos:', error);
+                throw error.response;
+            });
+    }
+
     return (
         <div className="NotificacionClass" onClick={click}>
             <div className='Container'>
@@ -24,10 +49,10 @@ export default function Notificacion({ user, mail, status, id, productos}) {
                 </div>
                 <p className='Data'>id: {id}</p>
                 <p className='Data'>status: {status}</p>
-                <button className='Btn'><FaCheckCircle className='iconBtn check' />Aceptar</button>
+                <button onClick={aceptar} className='Btn'><FaCheckCircle className='iconBtn check' />Aceptar</button>
                 <button className='Btn'><FaTrashCan className='iconBtn trash' />Eliminar</button>
             </div>
-            <Bandeja state={state} products={productos}/>
+            <Bandeja state={state} products={productos} />
         </div>
     );
 }
