@@ -1,5 +1,16 @@
+.EditarProductosClass{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background: white;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+}
+
 /* Reglas de estilo comunes */
-.Register .Container .Form {
+.EditarProductosClass .Container .Form {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -14,9 +25,7 @@
 /* Escritorio */
 @media (min-width: 769px) {
     
-    .Register {
-        width: 80%;
-        margin: 0% 10%;
+    .EditarProductosClass {
         height: 100vh;
         display: flex;
         justify-content: center;

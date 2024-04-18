@@ -5,18 +5,20 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useNavigate } from 'react-router-dom';
 import { RiEditLine } from "react-icons/ri";
+import EditarProducto from '../../../pages/EditarProducto/EditarProducto';
 import '../CardProduct/CardProduct.css'
 import { useState } from 'react';
 import CustomModal from '../modal/modal';
 import * as MessageProduct from "../../../utils/ErrorMessage/MessageProducts"
 import { deleteProductById } from '../../../Service/Products';
-export default function CardProduct({ name, image,  idProduct }) {
-
+export default function CardProduct({ name, image, idProduct, productOb}) {
+    const nav = useNavigate()
     const [active, setActive] = useState(false);
     const [message, setMessage] = useState({})
     const [recargar, setRecargar] = useState(false);
-
+    const [visibleEdit, setVisibleEdit] = useState("none")
     const deleteProduct = async (id) => {
         setActive(false);
         try {
@@ -42,13 +44,15 @@ export default function CardProduct({ name, image,  idProduct }) {
         }
       
     };
-
-
+    
+    const editar = () => {
+        setVisibleEdit("block")
+    }
 
     return (
         <Card sx={{ maxWidth: 300, boxShadow: "0px 0px 5px 1px", height: "auto" }} className='container-cardProducts' >
+            <EditarProducto state={visibleEdit} o={productOb}/>
             <CardMedia sx={{ height: 290 }} image={image} title="green iguana" />
-
             <CardContent sx={{ textAlign: "center" }}>
                 <Typography variant="h7" component="div" sx={{ fontWeight: "bold" }}> {name} </Typography>
                 <Typography variant="h8" component="div"> Lizard </Typography>
@@ -56,7 +60,7 @@ export default function CardProduct({ name, image,  idProduct }) {
 
             <CardActions sx={{ marginTop: "-12px", marginBottom: "10px" }}   >
                 <Button onClick={() => deleteProduct(idProduct)} variant="outlined" startIcon={<DeleteIcon />} > Eliminar </Button>
-                <Button variant="outlined" endIcon={<RiEditLine />}> Editar </Button>
+                <Button variant="outlined" onClick={editar} endIcon={<RiEditLine />}> Editar </Button>
             </CardActions>
 
             <CustomModal

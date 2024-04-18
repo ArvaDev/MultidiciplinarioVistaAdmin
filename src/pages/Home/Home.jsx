@@ -33,7 +33,9 @@ export default function Home() {
                         <CardProduct key={product._id} 
                                     name={product.name}
                                     image={product.imgUrl}
-                                    idProduct={product._id} />
+                                    idProduct={product._id} 
+                                    productOb={product}
+                                    />
                     ))}
             </div>
             <Footer />
