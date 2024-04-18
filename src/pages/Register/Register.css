@@ -1,4 +1,7 @@
 /* Reglas de estilo comunes */
+.RegisterClass{
+    width: 100%;
+}
 .Register .Container .Form {
     height: 100%;
     display: flex;
@@ -15,13 +18,12 @@
 @media (min-width: 769px) {
     
     .Register {
-        width: 80%;
-        margin: 0% 10%;
+        width: 100%;
+        margin: 5vh 0 0 0;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
- 
     }
 
     div.Form {
@@ -43,6 +45,7 @@
     .Form p {
         font-size: 30px;
         font-weight: bold;
+        margin: 0;
     }
 
     .Form h5 {

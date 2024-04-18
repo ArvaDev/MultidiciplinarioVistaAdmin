@@ -13,6 +13,8 @@ function Register() {
     const productPrecio = useField({ type: "Precio" })
     const productDescription = useField({type: "ValidarString"})
     const productAmount = useField({ type: "Cantidad" })
+    const productPresen = useField({type: "ValidarString"})
+    const productType = useField({tyep: "ValidarString"})
     const img = useImageUploader("https://i.imgur.com/zlZRPCT.jpg")
     const enviarObjeto = async () => {
         try{
@@ -25,6 +27,8 @@ function Register() {
                     imgUrl: img.value,
                     price: productPrecio.value,
                     amount: productAmount.value,
+                    typeProduct: productType.value,
+                    content: productPresen.value
                 })
                 
             }
@@ -33,7 +37,7 @@ function Register() {
         }
     }
     return (
-        <div>
+        <div className='RegisterClass'>
             <Header />
             <form action="" className="Register">
                 <div className="Form">
@@ -43,8 +47,12 @@ function Register() {
                         <TextField message="Nombre" customClass="textfieldClass3" onblur={productName.onblur} required/>
                     </div>
                     <div className='flexInput'>
-                        <TextField type="number" message="Cantidad" customClass="textfieldClass" onblur={productPrecio.onblur} required/>
-                        <TextField type="number" message="Precio" customClass="textfieldClass" onblur={productAmount.onblur} required/>
+                        <TextField min={0} type="number" message="Cantidad" customClass="textfieldClass" onblur={productPrecio.onblur} required/>
+                        <TextField min={0} type="number" message="Precio" customClass="textfieldClass" onblur={productAmount.onblur} required/>
+                    </div>
+                    <div className='flexInput'>
+                        <TextField message="Tipo de producto" customClass="textfieldClass" onblur={productType.onblur} value="Ejemplo: Miel" required/>
+                        <TextField message="Presentación" customClass="textfieldClass" onblur={productPresen.onblur} value="Ejemplo: 100 ml de miel en tarro" required/>
                     </div>
                     <div className="flex-img">
                         <TextArea message="Descripcion" onBlur={productDescription.onblur} />

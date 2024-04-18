@@ -8,12 +8,13 @@ import { addProduct } from '../../Service/Socios';
 import { useImageUploader } from '../../Hooks/useImgUpload'
 import './EditarProducto.css'
 import { uploadImgDrive } from '../../Service/UploadImage';
-
 export default function EditarProducto({state, o}) {
     const productName = useField({ type: "Nombre" })
     const productPrecio = useField({ type: "Precio" })
     const productDescription = useField({type: "ValidarString"})
     const productAmount = useField({ type: "Cantidad" })
+    const productPresen = useField({type: "ValidarString"})
+    const productType = useField({tyep: "ValidarString"})
     const img = useImageUploader(o.imgUrl)
     const enviarObjeto = async () => {
         try{
@@ -26,6 +27,8 @@ export default function EditarProducto({state, o}) {
                     imgUrl: img.value,
                     price: productPrecio.value,
                     amount: productAmount.value,
+                    typeProduct: productType.value,
+                    content: productPresen.value
                 })
                 
             }
@@ -46,8 +49,12 @@ export default function EditarProducto({state, o}) {
                         <TextField value={o.name} message="Nombre" customClass="textfieldClass3" onblur={productName.onblur} required/>
                     </div>
                     <div className='flexInput'>
-                        <TextField value={o.amount} type="number" message="Cantidad" customClass="textfieldClass" onblur={productPrecio.onblur} required/>
-                        <TextField value={o.price} type="number" message="Precio" customClass="textfieldClass" onblur={productAmount.onblur} required/>
+                        <TextField value={o.amount} min={0} type="number" message="Cantidad" customClass="textfieldClass" onblur={productPrecio.onblur} required/>
+                        <TextField value={o.price} min={0} type="number" message="Precio" customClass="textfieldClass" onblur={productAmount.onblur} required/>
+                    </div>
+                    <div className='flexInput'>
+                        <TextField message="Tipo de producto" customClass="textfieldClass" onblur={productType.onblur} value={o.typeProduct} required/>
+                        <TextField message="Presentación" customClass="textfieldClass" onblur={productPresen.onblur} value={o.content} required/>
                     </div>
                     <div className="flex-img">
                         <TextArea placeholder={o.description} message="Descripcion" onBlur={productDescription.onblur} />
