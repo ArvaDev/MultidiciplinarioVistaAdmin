@@ -33,6 +33,7 @@ function Register() {
             if (!value && !img.message) {
                 const getUrlImg = await uploadImgDrive(img.image);
                 console.log(getUrlImg);
+                
                 const response = await addProduct({
                     name: productName.value,
                     description: productDescription.value,
@@ -72,18 +73,18 @@ function Register() {
                     <div className="Form">
 
                         <div className='flexInput name'>
-                            <TextField message="Nombre" customClass="textfieldClass3" onblur={productName.onblur} required />
+                            <TextField message="Nombre" customClass="textfieldClass3" onblur={productName.onblur} onchange={productName.onblur}  value={productName.value} required />
                         </div>
                         <div className='flexInput'>
-                            <TextField min={0} type="number" message="Cantidad" customClass="textfieldClass" onblur={productAmount.onblur} required />
-                            <TextField min={0} type="number" message="Precio" customClass="textfieldClass" onblur={productPrecio.onblur} required />
+                            <TextField min={0} type="number" message="Cantidad" customClass="textfieldClass" onblur={productAmount.onblur}  onchange={productAmount.onblur} value={productAmount.value} required />
+                            <TextField min={0} type="number" message="Precio" customClass="textfieldClass" onblur={productPrecio.onblur} onchange={productPrecio.onblur} value={productPrecio.value} required />
                         </div>
                         <div className='flexInput'>
-                            <TextField message="Marca del producto" customClass="textfieldClass" onblur={Marca.onblur} value="Ejemplo: Pimez" required />
-                            <TextField message="Presentación" customClass="textfieldClass" onblur={productPresen.onblur} value="Ejemplo: 100 ml de miel en tarro" required />
+                            <TextField message="Marca del producto" customClass="textfieldClass" onblur={Marca.onblur}  onchange={Marca.onblur} placeholder="Ejemplo: Pimez" required />
+                            <TextField message="Presentación" customClass="textfieldClass" onblur={productPresen.onblur} onchange={Marca.onblur} placeholder="Ejemplo: 100 ml de miel en tarro" required />
                         </div>
                         <div className="flex-img">
-                            <TextArea message="Descripcion" onBlur={productDescription.onblur} />
+                            <TextArea message="Descripcion" onBlur={productDescription.onblur} onchange={productDescription.onblur} />
                             <img src="#" alt="" />
                         </div>
                         <div className="Update-responsive" style={{ backgroundImage: `url(${img.imagePreiew})` }}>

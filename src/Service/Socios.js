@@ -33,7 +33,7 @@ export const deleteByIdSocios = (IdSocio) => {
         }
     };
     
-    return axios.delete(`http://18.233.236.214/api/users/${IdSocio}`, config)
+    return axios.delete(`http:///api/users/${IdSocio}`, config)
         .then((response) => {
             if (response.status === 204) {
       

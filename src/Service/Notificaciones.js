@@ -1,22 +1,23 @@
 import axios from "axios";
 
-export default acepetSales = (object)=>{
 
+export const AceptarPedido = (object) => {
+
+    const token = window.localStorage.getItem('token');
     const config = {
-            
-        headers: {
+        headers: {  
             'x-access-token': token,
             'Content-Type': 'application/json'
         }
     };
-    return axios.patch('http://18.233.236.214/api/v1/orders', object, config)
-        .then((response) => {
-            console.log(response)
-            return response.data;
-        })
-        .catch((error) => {
-            console.log('Error al aceptar los pedidos', error);
-            throw error.response;
-        });
 
-}
+    return axios.patch('http://18.233.236.214/api/v1/orders', object, config)
+    .then((response) => {
+        console.log(response)
+        return response.data;
+    })
+    .catch((error) => {
+        console.log('Error al cargar productos:', error);
+        throw error.response;
+    });
+};

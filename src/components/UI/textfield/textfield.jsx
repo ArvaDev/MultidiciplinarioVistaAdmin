@@ -1,5 +1,5 @@
 import './textfield.css'
-function TextField({min, max, type, message, customClass, onblur, onchange, onFocus, required, value}) {
+function TextField({min, max, type, message, customClass, onblur, onchange, onFocus, required, value, placeholder}) {
     return (
         <div className={`TextFieldClass ${customClass}`}>
             <label>{message}</label>
@@ -10,6 +10,7 @@ function TextField({min, max, type, message, customClass, onblur, onchange, onFo
                     onChange={onchange} 
                     onFocus={onFocus} 
                     required={required} 
+                    placeholder={placeholder}
                     value={value}>
                     </input>
         </div>
