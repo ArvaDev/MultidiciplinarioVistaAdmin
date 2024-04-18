@@ -33,15 +33,16 @@ export default function RegisterSocios() {
             if (!value && !img.message) {
                 const getUrlImg = await uploadImgDrive(img.image);
                 const response = await addSocio({
-                    username :user.value,
-                    password :pass.value,
+                    username: user.value,
+                    password: pass.value,
                     email: mail.value,
                     telefono: tel.value,
-                    img:getUrlImg});
+                    img: getUrlImg
+                });
 
                 setMessage(messageAddSocio(true))
                 setActive(true);
-                
+
             } else {
                 setMessageError(value);
             }
@@ -67,33 +68,33 @@ export default function RegisterSocios() {
 
                     <div className="container-fields-socio">
                         <TextField
-                                message="Usuario: "
-                                customClass="LoginInput"
-                                onchange={user.onchange}
-                                onblur={user.onblur} />
+                            message="Usuario: "
+                            customClass="LoginInput"
+                            onchange={user.onchange}
+                            onblur={user.onblur} />
                         {user.messageError && <AlertError message={user.messageError} />}
 
-                        <TextField 
-                                message="Contraseña: "
-                                customClass="LoginInput"
-                                type="password"
-                                onblur={pass.onblur} />
+                        <TextField
+                            message="Contraseña: "
+                            customClass="LoginInput"
+                            type="password"
+                            onblur={pass.onblur} />
                         {pass.messageError && <AlertError message={pass.messageError} />}
 
-                        <TextField 
-                                message="Telefono: "
-                                customClass="LoginInput"
-                                type="text"
-                                onblur={tel.onblur}
-                                onchange={tel.onblur} />
+                        <TextField
+                            message="Telefono: "
+                            customClass="LoginInput"
+                            type="text"
+                            onblur={tel.onblur}
+                            onchange={tel.onblur} />
                         {tel.messageError && <AlertError message={tel.messageError} />}
 
-                        <TextField 
-                                message="Email: "
-                                customClass="LoginInput"
-                                type={"text"}
-                                onblur={mail.onblur}
-                                onchange={mail.onblur} />
+                        <TextField
+                            message="Email: "
+                            customClass="LoginInput"
+                            type={"text"}
+                            onblur={mail.onblur}
+                            onchange={mail.onblur} />
                         {mail.messageError && <AlertError message={mail.messageError} />}
                     </div>
 
@@ -102,25 +103,25 @@ export default function RegisterSocios() {
                         {img.message && <AlertError message={img.message} className={"error-img"} />}
                     </div>
 
-                    <div className="container-button"> 
+                    <div className="container-button">
                         <button className='agregarSocio' type='submit' >Agregar Socio</button>
-                       
+
                     </div>
                     {messageError && <AlertError message={messageError} className={"center-message"} />}
-                   
+
                     <div className="container-button">
                         <p className='decription-add'> Grupo Pimez se enorgulleze en saber que ahora formas parte de ellos.!</p>
                     </div>
                 </form>
 
             </div>
-            <CustomModal 
-                    onClose={handleCloseModal}
-                    title={message.title}
-                    description={message.description}
-                    colorMessage={message.colorMessage}
-                    colorClose={message.colorClose}
-                    active={active} />
+            <CustomModal
+                onClose={handleCloseModal}
+                title={message.title}
+                description={message.description}
+                colorMessage={message.colorMessage}
+                colorClose={message.colorClose}
+                active={active} />
         </div>
 
 
