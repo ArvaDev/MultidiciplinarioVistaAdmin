@@ -4,11 +4,11 @@ import TransparentBtn from '../../components/UI/transparentBtn/TransparentBtn';
 import Header from '../../components/UI/header/Header';
 import { useChangeValueField } from '../../Hooks/useChangeValueField';
 import TextArea from '../../components/UI/textArea/TextArea';
-import { addProduct } from '../../Service/Socios';
-import { useImageUploader } from '../../Hooks/useImgUpload'
+import { useChangeImgUpload } from '../../Hooks/useChangevalueImg';
 import './EditarProducto.css'
 import { uploadImgDrive } from '../../Service/UploadImage';
 import { FormDataValidation } from '../../utils/Form';
+import { updateProduct } from '../../Service/Products';
 
 export default function EditarProducto({ state, o }) {
 
@@ -18,7 +18,7 @@ export default function EditarProducto({ state, o }) {
     const productDescription = useChangeValueField({ type: "ValidarString", valueDefect: o.description })
     const productPresen = useChangeValueField({ type: "ValidarString", valueDefect: o.content })
     const Marca = useChangeValueField({ type: "ValidarString", valueDefect: o.typeProduct })
-    const img = useImageUploader(o.imgUrl)
+    const img = useChangeImgUpload(o.imgUrl)
 
     const enviarObjeto = async (event) => {
         try {
@@ -29,20 +29,19 @@ export default function EditarProducto({ state, o }) {
                 Marca.value,
                 productAmount.value,
                 productDescription.value]);
-
+           
             if (!value && !img.message) {
-                console.log(img.image);
-                //  const getUrlImg = await uploadImgDrive(img.image);
-                //  const response = await addProduct({
-                //      name: productName.value,
-                //      description: productDescription.value,
-                //      imgUrl: getUrlImg,
-                //      price: productPrecio.value,
-                //      amount: productAmount.value,
-                //      typeProduct: Marca.value,
-                //      content: productPresen.value
-                //  }, o._id)
-
+            
+                  const response = await updateProduct({
+                      name: productName.value,
+                      description: productDescription.value,
+                      imgUrl: img.image,
+                      price: productPrecio.value,
+                      amount: productAmount.value,
+                      typeProduct: Marca.value,
+                      content: productPresen.value
+                  }, o._id)
+                  alert ("se modifico correctamente");
             }
         } catch (err) {
             console.error(err)
