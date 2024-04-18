@@ -16,7 +16,7 @@ const GetStatics = () => {
         }
     };
 
-    return axios.post(`http://18.233.236.214/api/v1/reports/`, date, config)
+    return axios.post(`http://localhost:4000/api/v1/reports/`, date, config)
         .then((response) => {
             return response.data;
         })

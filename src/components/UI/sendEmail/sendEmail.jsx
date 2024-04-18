@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../sendEmail/index.css'
+import '../sendEmail/Boostrap.css'
 function Example({active}) {
   const [show, setShow] = useState(false);
 
@@ -12,9 +9,9 @@ function Example({active}) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <button variant="primary" onClick={handleShow}>
         Launch demo modal
-      </Button>
+      </button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

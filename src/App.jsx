@@ -10,6 +10,7 @@ import RegisterSocios from "./pages/RegisterSocio/RegisterSocio";
 import Register from "./pages/Register/Register";
 import Stadistic from "./pages/Stadistic/Stadistic"
 import NoFound from "./pages/NoFound/NoFound";
+
 export default function App() {
     return (
         <AuthProvider>

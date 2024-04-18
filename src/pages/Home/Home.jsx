@@ -15,6 +15,7 @@ export default function Home() {
                 try {
                     const productsData = await getProducts();
                     setProducts(productsData);
+                    console.log(productsData);
                 } catch (error) {
                     console.log(error); 
                 }
@@ -35,6 +36,8 @@ export default function Home() {
                                     image={product.imgUrl}
                                     idProduct={product._id} 
                                     productOb={product}
+                                    typeProduc={product.typeProduct}
+                                    content={product.content}
                                     />
                     ))}
             </div>

@@ -12,7 +12,7 @@ export const getSocios = () => {
         }
     };
     
-    return axios.get(`http://18.233.236.214/api/users`, config)
+    return axios.get(`http://localhost:4000/api/users`, config)
         .then((response) => {
             return response.data;
         })
@@ -33,7 +33,7 @@ export const deleteByIdSocios = (IdSocio) => {
         }
     };
     
-    return axios.delete(`http://18.233.236.214/api/users/${IdSocio}`, config)
+    return axios.delete(`http://localhost:4000/api/users/${IdSocio}`, config)
         .then((response) => {
             if (response.status === 204) {
       
@@ -57,7 +57,7 @@ export const addSocio = (data) =>{
             'Content-Type': 'application/json'
         }
     };
-    return axios.post(`http://18.233.236.214/api/users`, data, config)
+    return axios.post(`http://localhost:4000/api/users`, data, config)
     .then((response) => {
         return response.data;
     })
@@ -75,7 +75,7 @@ export const addProduct = (data) => {
             'Content-Type': 'application/json'
         }
     };
-    return axios.post(`http://18.233.236.214/api/products`, data, config)
+    return axios.post(`http://localhost:4000/api/products`, data, config)
     .then((response) => {
         return response.data;
     })

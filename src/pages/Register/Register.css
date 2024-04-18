@@ -1,9 +1,11 @@
 /* Reglas de estilo comunes */
+.RegisterClass{
+    width: 100%;
+}
 .Register .Container .Form {
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
     flex-direction: column;
 }
 
@@ -15,13 +17,12 @@
 @media (min-width: 769px) {
     
     .Register {
-        width: 80%;
-        margin: 0% 10%;
+        width: 100%;
+        margin: 4vh 0 0 0;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
- 
     }
 
     div.Form {
@@ -35,20 +36,29 @@
 
     }
 
+    .header-typeForm{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: -40px;
+    }
 
     .flex-img{
        width: 70%;
     }
 
-    .Form p {
+    .header-typeForm p {
         font-size: 30px;
-        margin-bottom: 0px;
         font-weight: bold;
- 
+        margin: 0;
     }
 
-    .Form h5 {
+    .header-typeForm span {
         font-family: 'DS';
+        font-size: 22px;
     }
 
     .Form .pres{
@@ -70,7 +80,8 @@
 
     div.Update {
         width: 40%;
-        height: 75%;
+        margin-right:5%;
+        height: 80%;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -113,6 +124,32 @@
     .Form .textfieldClass {
         width: 100%;
     }
+
+    .header-typeForm{
+    
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      
+    }
+
+    .flex-img{
+       width: 70%;
+    }
+
+    .header-typeForm p {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .header-typeForm span {
+        font-family: 'DS';
+        font-size: 20px;
+    }
+
 
 
     div.Update-responsive{

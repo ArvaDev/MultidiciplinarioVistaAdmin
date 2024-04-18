@@ -6,7 +6,7 @@ export const getProducts = () => {
             'Content-Type': 'application/json'
         }
     };
-    return axios.get('http://18.233.236.214/products', config)
+    return axios.get('http://localhost:4000/products', config)
         .then((response) => {
             return response.data;
         })
@@ -27,7 +27,7 @@ export const getByIdProducts = (idProduct) => {
         }
     };
 
-    return axios.get(`http://18.233.236.214products${idProduct}`, config )
+    return axios.get(`http://localhost:4000/products${idProduct}`, config )
         .then((response) => {
             return response.data;
         })
@@ -48,7 +48,7 @@ export const deleteProductById = (idProduct) => {
         }
     };
 
-    return axios.delete(`http://18.233.236.214/products/${idProduct}`, config)
+    return axios.delete(`http://localhost:4000/products/${idProduct}`, config)
         .then((response) => {
             return { message: "Producto eliminado correctamente" };
         })
@@ -57,3 +57,46 @@ export const deleteProductById = (idProduct) => {
             throw error.response;
         });
 }
+
+export const addProduct = (data)=>{
+    const token = window.localStorage.getItem('token');
+    
+    const config = {
+        headers: {
+            'x-access-token': token,
+            'Content-Type': 'application/json'
+        }
+    };
+
+    return axios.post("http://localhost:4000/products", data, config)
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.error('Error al cargar el producto:', error);
+            throw error.response;
+        });
+}
+
+
+export const updateProduct = (data, id)=>{
+    const token = window.localStorage.getItem('token');
+    
+    const config = {
+        headers: {
+            'x-access-token': token,
+            'Content-Type': 'application/json'
+        }
+    };
+
+    return axios.put(`http://localhost:4000/products/${id}`, data, config)
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.error('Error al cargar el producto:', error);
+            throw error.response;
+        });
+}
+
+

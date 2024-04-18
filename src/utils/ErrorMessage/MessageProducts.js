@@ -24,3 +24,31 @@ export const messageDeleteProduct =  (boolean) =>{
     }
 
 }
+
+export const MessageAddProduct =  (boolean) =>{
+    
+    let message = {
+        title: "",
+        descripcion: "",
+        colorMessage: "",
+        colorClose: ""
+    };
+    
+    if (boolean) {
+        return {
+            title: "Producto Agregado",
+            descripcion: "¡El producto ha sido agregado exitosamente! Puedes encontrar más detalles en la parte de inicio.",
+            colorMessage: "",
+            colorClose: ""
+        };
+    } else {
+        return {
+            title: "Error al agregar el producto",
+            descripcion: "Lo sentimos, ha ocurrido un error al intentar agregar el producto. Por favor, inténtalo nuevamente más tarde.",
+            colorMessage: "red",
+            colorClose: "black"
+        };
+    }
+    
+
+}

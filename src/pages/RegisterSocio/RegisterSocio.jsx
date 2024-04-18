@@ -64,6 +64,7 @@ export default function RegisterSocios() {
                     <h2 className='imgTitle-logo'>Registro de Socio <img src={logo} alt="" className='logo-h2' /> </h2>
                     <span className='description-text'>Con su incorporación, el grupo se fortalece aún más.</span>
                 </div>
+                
                 <form onSubmit={handlerClick} className='form-regiterSocio'>
 
                     <div className="container-fields-socio">
@@ -118,7 +119,7 @@ export default function RegisterSocios() {
             <CustomModal
                 onClose={handleCloseModal}
                 title={message.title}
-                description={message.description}
+                description={message.descripcion }
                 colorMessage={message.colorMessage}
                 colorClose={message.colorClose}
                 active={active} />
