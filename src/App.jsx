@@ -10,9 +10,7 @@ import RegisterSocios from "./pages/RegisterSocio/RegisterSocio";
 import Register from "./pages/Register/Register";
 import Stadistic from "./pages/Stadistic/Stadistic"
 import NoFound from "./pages/NoFound/NoFound";
-
-function App() {
-
+export default function App() {
     return (
         <AuthProvider>
             <Router>
@@ -30,5 +28,3 @@ function App() {
         </AuthProvider>
     );
 }
-
-export default App;
