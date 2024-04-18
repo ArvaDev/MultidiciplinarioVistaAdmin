@@ -26,7 +26,6 @@ function Register() {
                     price: productPrecio.value,
                     amount: productAmount.value,
                 })
-                
             }
         }catch(err){
             console.error(err)
