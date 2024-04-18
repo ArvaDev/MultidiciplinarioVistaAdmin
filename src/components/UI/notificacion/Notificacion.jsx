@@ -13,7 +13,8 @@ export default function Notificacion({ user, mail, status, id, productos }) {
 
     const aceptar = () => {
         const token = window.localStorage.getItem('token');
-        console.log("click")
+        alert("Pedido aceptado")
+        //location.reload()
         const object = {
             "id": [id],
             "status": "Completado",
@@ -28,6 +29,7 @@ export default function Notificacion({ user, mail, status, id, productos }) {
         };
         return axios.patch('http://18.233.236.214/api/v1/orders', object, config)
             .then((response) => {
+                console.log(response)
                 return response.data;
             })
             .catch((error) => {
